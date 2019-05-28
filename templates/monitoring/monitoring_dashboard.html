@@ -1,0 +1,110 @@
+{% extends 'monitoring/monitoring_base.html'%}
+{% load static %}
+{% block title%}| M&E Dashboard {% endblock %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/mehq-module.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+
+
+<!--BODY STARTS-->
+<div class="mehq-container">
+          <div class="section-1">
+            <div class="first">
+                <i class="fa fa-hourglass-half"></i><p>Pending Doc verification</p>
+                <h2>21</h2>
+                <p class="para">6 Verified  Applications[Yr 2019]</p>
+            </div>
+            <div class="first">
+                <i class="fa fa-hand-pointer"></i><p>Due for Payment</p>
+                <h2>3</h2>
+                <p class="para">2 Processed Payment[Yr 2019]</p>
+            </div>
+            <div class="first">
+                <i class="fa fa-clock"></i><p>Due for Inspection</p>
+                <h2>0</h2>
+                <p class="para">0 Inspections[Yr 2019]</p>
+            </div>
+            <div class="first">
+                <i class="fa fa-lightbulb"></i><p>Pending inspections</p>
+                <h2>0</h2>
+                <p class="para">0 Completed Inspections[Yr 2019]</p>
+            </div>
+            <div class="first">
+                <i class="fa fa-share-square"></i><p>Awaiting inc. Approval</p>
+                <h2>0</h2>
+                <p class="para">0 Approved inspections[Yr 2019]</p>
+            </div>
+          </div>
+
+          <div class="section2">
+
+              <div class="inner">
+                  <div class="one">
+                  <img src="{% static 'img/verified_user.png' %}" alt="">
+                  </div>
+                  <div class="two">
+                    <p class="big">Process Applications</p>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="http://">List applications</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Verify application Documents</a></span><br>
+                  </div>
+              </div>
+              <div class="inner">
+                  <div class="one">
+                    <img src="{% static 'img/incandescent.png' %}" alt="">
+                  </div>
+                  <div class="two">
+                    <p class="big">Inspections</p>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Schedule Inspections</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Inspection Schedule List</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Inspection Report</a></span><br>
+                  </div>
+              </div>
+              <div class="inner">
+                  <div class="one">
+                    <img src="{% static 'img/build.png' %}" alt="">
+                  </div>
+                  <div class="two">
+                    <p class="big">Utilities</p>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Hospital/Center Lookup</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Hospitals Radiography Practice Licence Lokup</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">List of RRBN Zonal offices</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Licence Categories and Processing Fees</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Document Verification Service</a></span><br>
+                  </div>
+              </div>
+          <!--End of body-->
+          </div>
+
+          <div class="section3">
+
+              <div class="inner">
+                  <div class="one">
+                    <img src="{% static 'img/dvr.png' %}" alt="">
+                  </div>
+                  <div class="two">
+                      <p class="big">Process Applications</p>
+                      <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">BI reports</a> </span><br>
+                    </div>
+              </div>
+              <div class="inner">
+                  <div class="one">
+                    <img src="{% static 'img/person.png' %}" alt="">
+                  </div>
+                  <div class="two">
+                      <p class="big">My Portal Account</p>
+                      <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">My User Account</a> </span><br>
+                    </div>
+              </div>
+          <!--End of body-->
+          </div>
+        </div>
+
+
+
+
+<!--BODY ENDS-->
+
+{% endblock %}

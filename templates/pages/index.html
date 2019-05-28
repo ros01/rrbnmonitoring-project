@@ -1,0 +1,141 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}| Welcome {% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home_page.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+
+
+
+<div class="section-1">
+        <div class="left">
+          <div class="login"><p>LOGIN</p></div>
+          <!-- Alerts -->
+          {% include 'partials/_alerts.html' %}
+            <form action="{% url 'login' %}" method="POST">
+              {% csrf_token %}
+              <div class="form">
+              <label for="LoginID">Login ID</label><br />
+
+
+
+              <input type="text" name="username" class="form-control" required placeholder="Enter Login ID">
+            </div>
+
+
+            <div class="form">
+              <label for="password">password</label><br />
+            <input type="password" name="password" class="form-control" required placeholder="Enter password">
+
+           </div>
+           <!-- <a class="form hover mb" href="#">forgot password?</a><br /><br /> -->
+           <!--<a class="btn-5" href="#">Login</a> -->
+           <input type="submit" value="Login" class="btn btn-secondary btn-block">
+         </form>
+       </div>
+       <div class="right">
+         <div class="top">
+           <p>
+             REGISTER YOUR PRACTICE AT ANY OF OUR OFFICES NEAR YOU
+           </p>
+         </div>
+         <div class="con-slider">
+             <div class="slider">
+                 <div class="slides">
+                   <img src="{% static 'img/1.jpg' %}" alt="">
+                   <div class="content">
+                    <!-- <h1> <a href="#">Register</a></h1> -->
+                     </div>
+                    <i class="fa fa-pause"></i>
+                 </div>
+                 <div class="slides">
+                     <img src="{% static 'img/2.jpg' %}" alt="">
+                     <div class="content">
+                    <!--  <h1> <a href="#">Contact Us</a></h1>  -->
+                     </div>
+                     <i class="fa fa-pause"></i>
+                   </div>
+                 <div class="slides">
+                   <img src="{% static 'img/3.jpg' %}" alt="">
+                   <div class="content">
+                  <!--   <h1> <a href="#">Sign In</a></h1>   -->
+                   </div>
+                   <i class="fa fa-pause"></i>
+                 </div>
+                 <div class="slides">
+                   <img src="{% static 'img/4.jpg' %}" alt="">
+                   <div class="content">
+                    <!--    <h1> <a href="#">Register</a></h1>   -->
+                     </div>
+                   <i class="fa fa-pause"></i>
+                 </div>
+               </div>
+         </div>
+       </div>
+     </div>
+     <div class="clear"></div>
+
+<!--SECTION 2 STARTS HERE-->
+
+     <div class="section2">
+     </div>
+
+<!--SECTION 2 ENDS HERE-->
+
+      </div>
+      <div class="clear"></div>
+      <div class="section-2">
+        <div class="left">
+          <div class="inner">
+            <p>TOP FAQs</p>
+            <br />
+            <a href="faq.html">How do i start Registration?</a>
+            <hr />
+            <a href="faq.html">How do i start Renewals?</a>
+            <hr />
+            <a href="faq.html">I Need help Who do i call?</a>
+            <hr />
+            <a href="faq.html">can i pay online?</a>
+            <hr />
+          </div>
+          <a class="btn-5" href="faq.html">More Faq</a>
+        </div>
+        <div class="right">
+          <div class="right-first">
+            <div class="inner">
+              <p class="p1">Stay compliant</p>
+              <div style="border: 1px solid #fff; border-radius: 5px;">
+                <span style="color: #fff; font-size: 14px; margin-left: 12px;"
+                  >REGISTER NOW</span
+                ><br />
+                <center><hr /></center>
+                <span style="font-size: 11px; color: #fff; margin-left: 12px;"
+                  >FOR CENTERS, HOSPITALS AND INSTITUTIONS</span
+                >
+              </div>
+            </div>
+            <a class="btn-4 " href="">Register Now</a>
+          </div>
+          <div class="right-second">
+            <div class="inner">
+              <p class="p1">ABOUT RRBN M&E Portal</p>
+              <p class="p2">
+                The RRBN Mornitoring and Enforment Online Marketers Portal
+                provides online services for registration and renewal of
+                radiography practices with the radiographers Registration Board
+                of Nigeria using the portal. Hospiatls and istitutions
+                practicing Radiography can now register their practices online,
+                make payments and.. <br /><br />
+                <a class="btn-3" href="{% url 'about' %}">READ MORE</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  {% endblock %}

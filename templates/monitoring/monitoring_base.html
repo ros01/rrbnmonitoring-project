@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="{% static 'fontawesome-free-5.8.2-web/css/all.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    {% block styles %} {% endblock %}
+
+    <title>RRBN Monitor}ing Portal</title>
+</head>
+<body>
+    <div class="container">
+      <div class="header">
+        <div class="logo-box">
+          <a class="logo" href="#"
+            ><img src="{% static 'img/rrbn-logo.png' %}" alt="rrbn logo"
+          /></a>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <nav>
+        <div class="nav-container">
+          <div class="section-1">
+            <i class="fa fa-cogs"></i><span class="push-down white">M&E HQ Module</span>
+          </div>
+          <div class="section-1">
+              <i class="fa fa-user-cog"></i><span class="push-down white">{{user.first_name}} {{user.last_name}}</span>
+          </div>
+          <div class="section-1">
+            <button class="btn-orage">Go To <i class="fa fa-arrow-circle-down"></i> </button>
+            <a href="javascript:{document.getElementById('logout').submit()}">
+            <button class="btn-orage"> <a href="{% url 'logout' %}">Log Out </a> <i class="fa fa-power-off"></i> </button>
+            </a>
+            <form action="{% url 'logout' %}" method="POST" id="logout">
+                {% csrf_token %}
+                <input type="hidden">
+              </form>
+          </div>
+        </div>
+      </nav>
+
+  {% block content%} {%endblock%}
+
+  <div class="footer">
+      <div class="footer-container">
+        <div class="footer-box">
+            <p class="fp">RRBN</p>
+            <p class="fp2">
+              RRBN's key mandate is to regulate the practice of radiography in Nigeria.
+            </p><br>
+            <p class="fp2">
+              RRBN Monitoring and Emforcement portal Automates all processes in RRBN M&E processes.
+            </p>
+        </div>
+
+        <div class="footer-box">
+            <p class="fp">Home Links</p>
+            <a href="index.html">Home</a><br />
+            <a href="about-us.html">About</a><br />
+            <a href="services.html">Services</a><br />
+            <a href="help.html">Help</a><br />
+        </div>
+        <div class="footer-box">
+          <p class="fp">External Links</p>
+          <a href="#">RRBN</a><br />
+          <a href="#">ARN</a><br />
+          <a href="#">NJIRT</a><br />
+          <a href="#">MINISTRY OF HEALTH</a>
+        </div>
+        <div class="footer-box">
+          <p class="fp">Contact Us</p>
+          <p class="fp2">
+            Plot 6, Block 7, Ishaya shekari crescent off wole soyinka road 2nd
+            Avenue, setraco, <br>Gwarimpa - Abuja, Nigeria.
+          </p>
+          <p class="fp2">+234 092914928</p>
+          <p class="fp2">info@rrbn.gov.ng</p>
+          <p class="fp2">www.rrbn.gov.ng</p>
+        </div>
+      </div>
+    </div>
+  <script src="{% static 'js/jquery-3.3.1.js' %}"></script>
+  <script>
+    var menu = false;
+    $(".menu").click(function(){
+      if(menu == false){
+        $("nav").fadeIn();
+          menu = true;
+      }else{
+        $("nav").fadeOut();
+          menu = false;
+      }
+    })
+  </script>
+  <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
+  <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
+  <script src="{% static 'js/main.js' %} "></script>
+
+</body>
+</html>

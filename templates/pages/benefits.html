@@ -1,0 +1,69 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block title%}| Portal Benefits {% endblock %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+
+<!--body-->
+
+        <div class="a-container">
+          <section class="one">
+            <p>Who We Are</p>
+          </section>
+          <section class="two">
+            <div class="two-a">
+              <div class="box">
+                <a href="{% url 'about' %}"><img src="{% static 'img/about.png' %}" alt="about rrbn portal"></a>
+                <center><a href="{% url 'about' %}"><p>About RRBN M&E Portal</p></a></center>
+              </div>
+              <div class="box">
+                <a href="{% url 'mission' %}"><img src="{% static 'img/mission.png' %}" alt="our mission"></a>
+                <center><a href="{% url 'mission' %}"><p>Our Mission</p></a></center>
+              </div>
+              <div class="box">
+                <a href="{% url 'mandate' %}"><img src="{% static 'img/mandate.png' %}" alt="the Mand E mandate"></a>
+                <center><a href="{% url 'mandate' %}""><p>The M & E Mandate</p></a></center>
+              </div>
+              <div class="box">
+                <a href="{% url 'benefits' %}"><img src="{% static 'img/benefits.png' %}" alt="Benefits"></a>
+                <center><a href="{% url 'benefits' %}"><p>Benefits</p></a></center>
+              </div>
+              <center><p>Have a question?</p>
+              <a class="faq" href="{% url 'faq' %}">Click here to visit our Faq section</a></center>
+            </div>
+            <div class="two-b">
+
+              <h3>Benefits of the RRBN M&E Portal</h3>
+              <p>The RRBN Monitoring and Enforcement Portal completely automates all core processes involved in the application and renewal of Radiography Practice in Nigeria within the Radiographers Registration Board of Nigeria. With the Portal in place, Hospitals, Institutions and Diagnostic centre Administrators can register or renew the practices from the comfort of the hospitals or centres. Listed below is a summary of benefits of the portal: </p>
+			  <p style="margin-left: 30px;">
+				<img style="width: 20px; margin-top: 3px; margin-right: 4px; float: left;"
+				src="{% static 'img/check-circle.png' %}" alt="check-circle">Convenient and Easy to Use <br/>
+				<img style="width: 20px; margin-top: 3px; margin-right: 4px; float: left;"
+				src="{% static 'img/check-circle.png' %}" alt="check-circle">High System Security <br/>
+				<img style="width: 20px; margin-top: 3px; margin-right: 4px; float: left;"
+				src="{% static 'img/check-circle.png' %}" alt="check-circle">e-Payment <br/>
+				<img style="width: 20px; margin-top: 3px; margin-right: 4px; float: left;"
+				src="{% static 'img/check-circle.png' %}" alt="check-circle">Electronic Data Storage and Processing <br/>
+				<img style="width: 20px; margin-top: 3px; margin-right: 4px; float: left;"
+				src="{% static 'img/check-circle.png' %}" alt="check-circle">Paperless, Flexible and Robust <br/>
+				<img style="width: 20px; margin-top: 3px; margin-right: 4px; float: left;"
+				src="{% static 'img/check-circle.png' %}" alt="check-circle">Real time Notifications and Alerts <br/>
+				<img style="width: 20px; margin-top: 3px; margin-right: 4px; float: left;"
+				src="{% static 'img/check-circle.png' %}" alt="check-circle">Numerous Reports for Administrative Purposes <br/>
+				<img style="width: 20px; margin-top: 3px; margin-right: 4px; float: left;"
+				src="{% static 'img/check-circle.png' %}" alt="check-circle">A Digital Experience Platform <br/>
+			  </p>
+
+              <div class="push"></div>
+            </div>
+          </section>
+        </div>
+
+        <!--body ends-->
+
+{% endblock %}

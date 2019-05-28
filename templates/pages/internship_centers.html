@@ -1,0 +1,64 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}| Centres for Internship {% endblock %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/centres_approved_internship.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+
+
+<!--BODY STARTS-->
+
+  <div class="centre-container">
+     <div class="section-1">
+       <div class="inner1">
+         <img src="{% static 'img/xray-room.jpg' %}" alt="xray room">
+       </div>
+       <div class="inner2">
+         <div class="a">
+           <h4>HOSPITALS/CENTERS ACCREDITED FOR INTERNSHIP TRAINING</h4>
+           <p>Click the link below to view list of Hospitals/Centers accredited for internship Training</p>
+           <p style="font-size:12px; color: rgb(20, 167, 76);"><img src="{% static 'img/archive-paper.png' %}" alt="archive image"> VIEW LIST OF ACCREDITED CENTERS</p>
+         </div>
+         <div class="info">
+           <p class="p1">NEED YOUR CENTER ACCREDITED FOR INTERNSHIP?</p>
+           <p class="p2">Click the link below to start your accreditation process</p>
+           <button><a href="{% url 'internship_centers' %}">REGISTER HERE</button>
+         </div>
+
+       </div>
+       <div class="inner3">
+         <div class="a">
+           <p><a href="{% url 'zonal_offices' %}">LOCATE OUR ZONAL OFFICE</a></p>
+            <p><a href="{% url 'zonal_offices' %}">REGISTER RADIOGRAPGY PRACTICE</a></p>
+            <p><a href="{% url 'zonal_offices' %}">VALIDATE REGISTRATION STATUS</a></p>
+           <p style="border-bottom: none;"><a href="{% url 'contact' %}">CONTACT US</a></p>
+         </div>
+       </div>
+     </div>
+
+     <div class="section-2">
+       <div class="sec2-inner">
+         <h3>Still Have a Question?</h3>
+         <p>Click the link below to visit: frequently Asked Questions</p>
+         <button class="mmt"><a href="{% url 'faq' %}">GO TO FAQ</a><img src="{% static 'img/arrow.png' %}" alt="arrow"> </button>
+       </div>
+       <div class="sec2-inner">
+         <p class="down">Reach out to us on:<br>
+         (+234) 909 879 5917
+         </p>
+       </div>
+       <div class="sec2-inner">
+
+         <p class="down">Email:
+         send an email to: <br>monitoring@rrbn.gov.ng
+         </p>
+       </div>
+     </div>
+   </div>
+
+   <!--BODY ENDS-->
+
+   {% endblock %}

@@ -1,0 +1,168 @@
+
+/*BODY STARTS*/
+
+.f-container{
+  width: 73%;
+  height: auto;
+  margin: 20px auto;
+  border: 1px solid #2DC565;
+}
+
+.f-container .faq{
+  width: 250px;
+  height: auto;
+  background: #2DC565;
+}
+
+.f-container .faq p{
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.f-container .tab-section {
+  width: 90%;
+  margin: 40px auto;
+  padding: 0 10px;
+}
+
+.f-container .tab-section .tab-area {
+  width: 100%;
+  position: relative;
+  color: #000;
+}
+
+.f-container .tab-section .tab-area input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.f-container .tab-section .tab-area label {
+  background:#f2f5f7;
+  cursor: pointer;
+  display: block;
+  font-size: 14.5px;
+  line-height: 2.5;
+  padding: 3px 0 5px 2em;
+  position: relative;
+  margin-bottom: 10px;
+  transition: all 0.3s ease 0s;
+  color: #000;
+}
+
+.f-container .tab-section .tab-area label:hover {
+  background: rgb(28, 163, 78);
+  color: #fff;
+}
+
+.f-container .tab-section .tab-content {
+  background: #fff;
+  max-height: 0;
+  overflow: hidden;
+  padding: -3px 15px;
+  -webkit-transition: max-height 0.3s;
+  -o-transition: max-height 0.3s;
+  transition: max-height 0.3s;
+  font-size: 15px;
+  color: #838282;
+  line-height: 30px;
+}
+
+.f-container .tab-section .tab-area label .l{
+float: left;
+font-size: 25px;
+font-weight: bold;
+color: #000;
+margin-top: -10px;
+padding-right: 10px;
+}
+
+.f-container .tab-section .tab-area input:checked ~ .tab-content {
+  max-height: 20em;
+}
+
+.clearfix{
+  clear: both;
+}
+/*
+label:before,
+label:after
+{
+  content:'';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  transition: transform 0.25s ease-out;
+}
+
+label:before{
+  top: 5px;
+  right: 20px;
+  width: 2px;
+  height: 22px;
+  background: #fff;
+  margin-top: -2px;
+}
+
+label:after{
+  top: 50%;
+  right: 10px;
+  width: 22px;
+  height: 1px;
+  background: #fff;
+  margin-top: -2px;
+}
+
+*/
+
+/*BODY ENDS*/
+
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 768px) {
+.logo-box {
+  float: none;
+  text-align: center;
+}
+
+.header-links {
+  text-align: center;
+  margin-top: -40px;
+  float: none;
+  display: none;
+}
+
+
+/*BODY MOBILE STARTS*/
+
+.f-container{
+  width: 100%;
+  padding: 0;
+}
+
+.tab-section{
+  margin:0;
+  padding: 0;
+  width: 100%;
+}
+
+.f-container .tab-section .tab-content {
+  line-height: 17px;
+}
+
+/*BODY MOBILE ENDS*/
+
+
+}
+
+@media screen and (max-width: 400px) {
+  .f-container .tab-section .tab-area label{
+    font-size: 30px;
+    }
+}

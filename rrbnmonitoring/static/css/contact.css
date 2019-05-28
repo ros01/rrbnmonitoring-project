@@ -1,0 +1,131 @@
+
+/*body styles*/
+
+.c-container {
+  width: 80%;
+  margin: 10px auto;
+  height: 600px;
+  background: #f8f8f8;
+}
+
+.c-container .a {
+  width: 45%;
+  float: left;
+}
+
+.form {
+  padding: 10px 20px;
+}
+
+.a p {
+  padding-top: 10px;
+  font-size: 14px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.form label {
+  font-size: 14px;
+  color: #838080;
+}
+
+.ta {
+  margin: 10px 0 0 0;
+}
+textarea {
+  height: 200px;
+  width: 90%;
+  background: #fff;
+  border: none;
+}
+
+.form input {
+  width: 90%;
+  height: 30px;
+  padding: 15px;
+  border: none;
+}
+
+.btn-2 {
+  background: rgb(77, 122, 107);
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin: 5px 10px 0 20px;
+  padding: 5px 10px;
+  border: 1px solid rgb(77, 122, 107);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.c-container .b {
+  width: 50%;
+  float: right;
+}
+
+.b .head {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.b p {
+  font-size: 14px;
+}
+/*footer styles*/
+
+
+/* MEDIA QUERIES*/
+
+@media screen and (max-width: 768px) {
+.logo-box {
+  float: none;
+  text-align: center;
+}
+
+.header-links {
+  text-align: center;
+  margin-top: -40px;
+  float: none;
+  display: none;
+}
+
+.nav {
+  height: auto;
+}
+
+.nav ul li {
+  float: none;
+}
+
+.nav ul li a:hover {
+  background: rgb(206, 55, 55);
+  color: #fff;
+}
+
+/*body mobile styles*/
+
+.c-container{
+width: 100%;
+}
+.c-container .a {
+  width: 100%;
+  padding: 20px;
+}
+.c-container .b {
+  width: 100%;
+  padding: 20px;
+}
+
+/*footer mobile styles*/
+.fml {
+  margin-left: 0;
+}
+
+.footer .footer-container .footer-box {
+  width: 100%;
+  float: left;
+  padding-right: 40px;
+}
+
+}

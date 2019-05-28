@@ -1,0 +1,57 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}| Our Mission {% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}" />
+{% endblock %}
+
+{% block content %}
+<!--body-->
+
+      <div class="a-container">
+        <section class="one">
+          <p>Who We Are</p>
+        </section>
+        <section class="two">
+          <div class="two-a">
+            <div class="box">
+              <a href="{% url 'about' %}"><img src="{% static 'img/about.png' %}" alt="about rrbn portal"></a>
+              <center><a href="{% url 'about' %}"><p>About RRBN M&E Portal</p></a></center>
+            </div>
+            <div class="box">
+              <a href="{% url 'mission' %}"><img src="{% static 'img/mission.png' %}" alt="our mission"></a>
+              <center><a href="{% url 'mission' %}"><p>Our Mission</p></a></center>
+            </div>
+            <div class="box">
+              <a href="{% url 'mandate' %}"><img src="{% static 'img/mandate.png' %}" alt="the Mand E mandate"></a>
+              <center><a href="{% url 'mandate' %}"><p>The M & E Mandate</p></a></center>
+            </div>
+            <div class="box">
+              <a href="{% url 'benefits' %}"><img src="{% static 'img/benefits.png' %}" alt="Benefits"></a>
+              <center><a href="{% url 'benefits' %}"><p>Benefits</p></a></center>
+            </div>
+            <center><p>Have a question?</p>
+            <a class="faq" href="{% url 'faq' %}">Click here to visit our Faq section</a></center>
+          </div>
+          <div class="two-b">
+            <img src="{% static 'img/logo.jpg' %}" alt="rrbn logo">
+            <h3>RRBN Mission</h3>
+            <p>We promise to promote and enhance the image of Radiography profession in Nigeria and in the west African sub-region through: A) Provision of policies for qualitative academic and professional education at undergraduate and graduate levels; B) Constant provision and revision of policy frame works for quality services and ethical standards for practice of the profession; and C) Entrenchment of measures that are capable of building and sustaining the professional pride and ego of the radiographer at the highest level.</p>
+
+            <div class="push"></div>
+
+            <h3>Vision</h3>
+            <p>To position Radiography at the top of health profession in Nigeria </p>
+
+            <div class="push"></div>
+          </div>
+        </section>
+      </div>
+
+      <!--body ends-->
+
+
+
+
+{% endblock %}

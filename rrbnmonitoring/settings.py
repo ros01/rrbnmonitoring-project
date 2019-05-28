@@ -31,14 +31,27 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'pages.apps.PagesConfig',
+    'services.apps.ServicesConfig',
+    'hospitals.apps.HospitalsConfig',
+    'monitoring.apps.MonitoringConfig',
+    'utilities.apps.UtilitiesConfig',
+    'zonal_offices.apps.ZonalOfficesConfig',
+    'registrars_office.apps.RegistrarsOfficeConfig',
+    'accounts.apps.AccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    #'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
+    #third party APP_DIRS
+    #'cripsy_forms',
+    #'registration',
 ]
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -54,7 +67,7 @@ ROOT_URLCONF = 'rrbnmonitoring.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -75,8 +88,11 @@ WSGI_APPLICATION = 'rrbnmonitoring.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'rrbnmonitoring',
+        'USER': 'postgres',
+        'PASSWORD': 'blackstone1',
+        'HOST': 'localhost',
     }
 }
 
@@ -116,5 +132,33 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
-
+STATIC_ROOT=os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+STATICFILES_DIRS=[
+    os.path.join(BASE_DIR, 'rrbnmonitoring/static')
+]
+
+# Media Folder Settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+# messages
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
+# Email config
+#E-MAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER='blueacetechng@gmail.com'
+EMAIL_HOST_PASSWORD=''
+EMAIL_USE_TLS=True
+
+#Crispy FORM TAGs SETTINGS
+#CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+#DJANGO REGISTRATION REDUX SETTINGS
+#ACCOUNT_ACTIVATION_DAYS = 7
+#REGISTRAITON_AUTO_LOGIN = True
+#SITE_ID = 1

@@ -1,0 +1,49 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}| Guidelines {% endblock %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/guidelines.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+
+<!--body-->
+       <div class="top">
+         <p>Radiography Practice Registration and Renewal Guidelines
+         </p>
+       </div>
+       <div class="g-container">
+         <div class="body">
+
+           <p style="color:black;">Download Radiography Practice Application and Renewal Guidelines for your hospital or institution
+           </p>
+
+           <div class="blocks">
+             <div class="inner-blocks">
+               <p>REGISTRATION <br>GUIDELINES FOR HOSPITALS/CENTERS</p>
+               <h4>Last Update: January 2019</h4>
+               <center><button class="btnDownload">DOWNLOAD</button></center>
+             </div>
+             <div class="inner-blocks">
+               <p>RENEWAL <br>GUIDELINES FOR HOSPITALS/CENTERS</p>
+               <h4>Last Update: January 2019</h4>
+               <center><button class="btnDownload">DOWNLOAD</button></center>
+             </div>
+             <div class="inner-blocks">
+               <p>REGISTRATION <br>GUIDELINES FOR INSTITUTIONS</p>
+               <h4>Last Update: January 2019</h4>
+               <center><button class="btnDownload">DOWNLOAD</button></center>
+             </div>
+             <div class="inner-blocks">
+               <p>RENEWAL <br>GUIDELINES FOR INSTITUTIONS</p>
+               <h4>Last Update: January 2019</h4>
+               <center><button class="btnDownload">DOWNLOAD</button></center>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <!--body ends-->
+
+{% endblock %}
