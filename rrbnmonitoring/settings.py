@@ -155,6 +155,12 @@ EMAIL_HOST_USER='blueacetechng@gmail.com'
 EMAIL_HOST_PASSWORD=''
 EMAIL_USE_TLS=True
 
+try:
+    from .local_settings import *
+except ImportError:
+    pass
+
+
 #Crispy FORM TAGs SETTINGS
 #CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
