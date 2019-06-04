@@ -48,7 +48,11 @@ header {
 
 .logo-box .logo {
   display: block;
-  padding: 10px;
+  padding: 10px 10px 10px 5px;
+  margin-left: 5px
+}
+.logo-box .logo img {
+  margin-left: 120px;
 }
 
 .header i{
@@ -89,14 +93,18 @@ header {
 nav{
   width: 100%;
   height: 51px;
-  background: #32776B;
+  background: #01a372;
+}
+
+nav ul{
+  margin-left: 135px;
 }
 
 ul li{
   list-style: none;
   width: 200px;
   line-height: 50px;
-  background-color: #32776B;
+  background-color: #01a372;
   box-shadow: 0px 1px 1px 0 white;
   float: left;
   text-align: left;
@@ -109,29 +117,38 @@ nav ul li a{
   padding-left: 20px;
 }
 
-nav ul li a:hover{
+nav ul > li > a:hover{
+color: #EAB25B;
+}
+
+nav ul > li > ul  li{
+  background: #fff;
+}
+
+nav ul > li > ul  li a{
   color: #000;
 }
 
-nav ul li ul li a:hover{
-  color:  #123553;
-
-  }
+nav ul li ul > li > a:hover{
+color: #fff;
+}
 
 nav ul li ul li:hover{
 width: 100%;
-background-color: #32776B;
+background-color: #01a372;
 }
 
 ul li ul {
   display: none;
   position: absolute;
   top: 51px;
+  left: -135px;
 }
 
 nav ul li:hover ul{
   display: block;
   z-index: 100;
+
 
 }
 /*fist section styles*/
@@ -386,7 +403,7 @@ color: green;
 
 .footer{
   width: 100%;
-  background: #32776B;
+  background: #01a372;
   overflow: hidden;
   clear: both;
   border-top: 2px solid rgb(75, 201, 75);
@@ -446,7 +463,7 @@ color: green;
 
 .copyright{
   width: 100%;
-  background-color: #000;
+  background-color: #1f351b;
   height: 50px;
   clear: both;
   overflow: hidden;
@@ -475,6 +492,10 @@ color: green;
   nav{
     width: 100%;
     height: auto;
+  }
+
+  nav ul{
+    margin-left: 0;
   }
 
   ul li{

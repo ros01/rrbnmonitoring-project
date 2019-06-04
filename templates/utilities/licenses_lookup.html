@@ -1,0 +1,73 @@
+{% extends 'monitoring/monitoring_base.html'%}
+{% load static %}
+{% block title%}| Hospital Radiography Practice Licenses Look Up {% endblock %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/mehq-module.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+
+
+      <div class="container">
+        <h3>Hospital Radiography Practice Licence Records</h3>
+        <table class="table table-striped table-bordered table-hover" id="mydata">
+          <thead>
+           <tr style="background: #32776B">
+             <td style="color: #fff;" >SN</td>
+             <td style="color: #fff;" >Hospital name</td>
+             <td style="color: #fff;" >Licence No:</td>
+             <td style="color: #fff;" >Licence Category</td>
+             <td style="color: #fff;" >Issue Date</td>
+             <td style="color: #fff;" >Expiry Date</td>
+             <td style="color: #fff;" >Status</td>
+           </tr>
+          </thead>
+          <tfoot>
+           <tr style="background: #32776B">
+             <td style="color: #fff;" >SN</td>
+             <td style="color: #fff;" >Hospital name</td>
+             <td style="color: #fff;" >Licence No:</td>
+             <td style="color: #fff;" >Licence Category</td>
+             <td style="color: #fff;" >Issue Date</td>
+             <td style="color: #fff;" >Expiry Date</td>
+             <td style="color: #fff;">Status</td>
+           </tr>
+          </tfoot>
+          <tbody>
+            {% if license %}
+              {% for license in license %}
+              <tr>
+                <td>{{license.id}} </td>
+                <td>{{license.hospital_name}}</td>
+                <td>{{license.license_id}}</td>
+                <td>{{license.license_category}}</td>
+                <td>{{license.issue_date}}</td>
+                <td>{{license.expiry_date}}</td>
+                <td>{{license.status}}</td>
+             </tr>
+             {% endfor %}
+            {% else %}
+              <div class="col-md-12">
+                <h3>No Practice Licenses Available</h3>
+              </div>
+
+            {% endif %}
+
+
+          </tbody>
+        </table>
+</div>
+
+<!--Jquery plugin-->
+<script src="{% static 'js/jquery.js' %}"></script>
+
+<!--other javascript plugins-->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'js/dataTables.bootstrap.min.js' %}"></script>
+<script>
+$('#mydata').dataTable();
+</script>
+
+{% endblock %}

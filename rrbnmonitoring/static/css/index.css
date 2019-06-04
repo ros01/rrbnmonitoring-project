@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*main  Styling*/
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7em;
+  overflow-x: hidden;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  padding-bottom: 20px;
+}
+p {
+  margin: 10px 0;
+}
+
+.clearfix{
+  clear: both;
+}
+
+.container{
+  width: 100%;
+  height: auto;
+}
+
+/*header styles*/
+
+.header {
+  width: 100%;
+  height: 90px;
+  position: relative;
+}
+
+.logo-box {
+  float: left;
+}
+
+
+
+.logo-box .logo {
+  display: block;
+  padding: 10px;
+  }
+  
+.header i{
+  float: right;
+  margin: 30px 30px 0 0;
+  font-size: 45px;
+  color: green;
+  display: none;
+  cursor: pointer;
+}
+
+.ml{
+  margin-left: 5px;
+}
+
+nav{
+  width: 100%;
+  height: 51px;
+  background: green;
+
+}
+ul li{
+  list-style: none;
+  width: 200px;
+  line-height: 50px;
+  position: relative;
+  background-color: green;
+  box-shadow: 0px 1px 1px 0 white;
+  float: left;
+  text-align: left;
+}
+
+nav ul li a:hover{
+  background: rgb(44, 177, 44);
+  display: block;
+}
+
+ul li ul {
+  display: none;
+}
+
+nav ul li:hover ul{
+  display: block;
+}
+
+nav ul li a{
+  color: #fff;
+  font-size: 18px;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 768px){
+
+  .header i{
+    margin: 30px 30px 0 0;
+    display: block;
+  }
+
+  nav{
+    width: 100%;
+    height: auto;
+  }
+
+  ul li{
+    width: 100%;
+    float: none;
+    text-align: left;
+  }
+
+
+  ul li a{
+    width: 100%;
+    display: block;
+    padding-left: 25px;
+  }
+
+  ul li ul{
+    position: static;
+  }
+
+  ul li ul li a{
+    background: rgb(15, 15, 15)
+  }
+
+}

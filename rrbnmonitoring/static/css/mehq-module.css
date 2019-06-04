@@ -118,7 +118,7 @@ nav .nav-container .section-1 button i{
   height: auto;
   margin: 20px auto;
  }
- 
+
  .section-1{
    width: 100%;
    margin: 0 auto;
@@ -302,7 +302,7 @@ nav .nav-container .section-1 button i{
   font-size: 16px;
   color: #ddd;
   line-height: 1.3em;
-  float: left; 
+  float: left;
 }
 
 .footer .footer-container .footer-box a:hover{
@@ -317,12 +317,12 @@ nav .nav-container .section-1 button i{
   overflow: hidden;
 }
 .copyright .copyright-container{
-  width: 80%; 
-  margin: 0 auto; 
+  width: 80%;
+  margin: 0 auto;
 }
 
 .copyright .copyright-container p{
-  color: #fff; 
+  color: #fff;
   padding-top: 5px;
 }
 
@@ -334,12 +334,12 @@ nav .nav-container .section-1 button i{
     height: auto;
     overflow: auto;
   }
-  
+
   .logo-box {
     float: none;
     margin-left: 0;
   }
-  
+
   .logo-box .logo img {
     width: 100%;
   }
@@ -389,7 +389,7 @@ nav .nav-container .section-1 button{
   width: 100%;
   margin: 0;
   display: block;
-} 
+}
 
 .section-1 .first{
   width: 100%;
