@@ -154,12 +154,3 @@ try:
     from .local_settings import *
 except ImportError:
     pass
-
-
-#Crispy FORM TAGs SETTINGS
-#CRISPY_TEMPLATE_PACK = 'bootstrap3'
-
-#DJANGO REGISTRATION REDUX SETTINGS
-#ACCOUNT_ACTIVATION_DAYS = 7
-#REGISTRAITON_AUTO_LOGIN = True
-#SITE_ID = 1
