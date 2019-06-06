@@ -49,43 +49,20 @@ header {
 .logo-box .logo {
   display: block;
   padding: 10px 10px 10px 5px;
-  margin-left: 5px
+  margin-left: 125px
 }
+
 .logo-box .logo img {
-  margin-left: 120px;
+  float:left;
 }
 
 .header i{
   float: right;
-  margin: 30px 30px 0 0;
+  display:block;
   font-size: 45px;
   color: green;
-  display: none;
   cursor: pointer;
-}
-
-.header-links {
-  float: right;
-}
-
-.header-links ul {
-  list-style: none;
-}
-
-.header-links ul li {
-  float: left;
-}
-
-.header-links ul li a {
-  display: block;
-  padding: 45px 20px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.header-links ul li a:hover {
-  color: green;
+  display: none;
 }
 
 /* nav styles*/
@@ -232,18 +209,6 @@ nav ul li:hover ul{
   border-radius: 5px;
 }
 
-.btn-4{
-  background: #EAB25B;
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-  padding: 2px 10px;
-  margin: 50px 10px 10px 10px;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 5px;
-  float: right;
-}
 
 .btn-5{
   background: #1c844c;
@@ -256,6 +221,8 @@ nav ul li:hover ul{
   border: 1px solid #1c844c;
   border-radius: 5px;
 }
+
+
 /*section 1 right*/
 .section-1 .right {
   width: 72%;
@@ -277,33 +244,8 @@ nav ul li:hover ul{
   margin-top: 0;
 }
 
-.section-1 .right .section1-box1 {
-  margin-top: 5px;
-  width: 33%;
-  height: 305px;
-  float: left;
-  background: rgba(243, 240, 240, 0.459);
-  margin-right:10px;
-}
-
 .bmt{
   margin: 25px 0;
-}
-.section-1 .right .section1-box2 {
-  margin-top: 5px;
-  width: 32%;
-  height: 305px;
-  float: left;
-  background: rgba(243, 240, 240, 0.459);
-  margin-right:10px;
-}
-
-.section-1 .right .section1-box3 {
-  margin-top: 5px;
-  width: 32%;
-  height: 305px;
-  float: left;
-  background: rgba(243, 240, 240, 0.459);
 }
 
 .clear{
@@ -357,7 +299,7 @@ color: green;
   margin: 5px 0;
 }
 .section-2 .right .right-first .inner{
-  width: 35%;
+  width: 100%;
   margin-left: 40px;
   float: left;
 }
@@ -366,8 +308,41 @@ color: green;
   color: #fff;
   font-size: 16px;
   padding: 0;
-  margin: 5px 0 5px 0px;;
+  margin: 5px 0 5px 0px;
 }
+
+.section-2 .right .right-first .inner h1{
+  color: #fff;
+  font-size: 20px;
+  padding: 0;
+  margin-left: 27%;
+  margin-top: 10px;
+    margin-bottom: -2px;
+}
+
+.section-2 .right .right-first .inner p{
+  color: #fff;
+  font-size: 16px;
+  padding: 0;
+  margin-left: 20%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.btn-4x {
+  background: #eab25b;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-left: 30%;
+  margin-top: 10px;
+}
+
+
 .section-2 .right .right-first .inner hr{
   width: 70%;
 }
@@ -484,14 +459,28 @@ color: green;
 @media screen and (max-width: 768px)
 {
 
+
+  .logo-box {
+    float: none;
+    text-align: center;
+  }
+
+  .logo-box .logo {
+    display: block;
+    padding: 10px 10px 10px 5px;
+    margin-left: 0px
+  }
+
+
   .header i{
-    margin: 30px 30px 0 0;
+    margin: 5px 30px 0 0;
     display: block;
   }
 
   nav{
     width: 100%;
     height: auto;
+    margin-bottom: -30px;
   }
 
   nav ul{
@@ -516,20 +505,10 @@ color: green;
   }
 
   ul li ul li a{
-    background: rgb(15, 15, 15)
-  }
+    background: #fff !important;
+    color: #000 !important;
+    }
 
-.logo-box {
-  float: none;
-  text-align: center;
-}
-
-.header-links {
-  text-align: center;
-  margin-top: -40px;
-  float: none;
-  display: none;
-}
 
 .nav {
   height: auto;
@@ -540,8 +519,16 @@ color: green;
 }
 
 .nav ul li a:hover {
-  background: rgb(206, 55, 55);
   color: #fff;
+}
+
+nav ul > li > ul  li{
+  background: #fff;
+}
+
+nav ul > li > ul li a:hover{
+  color: #fff !important;
+  background-color: lightgreen !important;
 }
 
 .section-1 {
@@ -549,6 +536,8 @@ color: green;
 }
 .section-1 .left {
   width: 100%;
+  height: 280px !important;
+    margin-bottom: -1px !important;
 }
 
 .section-1 .left .login {
@@ -560,26 +549,60 @@ color: green;
   width: 100%;
 }
 
-.section-1 .right .section1-box1 {
-  width: 100%;
-}
 
-.section-1 .right .section1-box2 {
-  width: 100%;
-}
-
-.section-1 .right .section1-box3 {
-  width: 100%;
-}
 .section-2 {
-  margin-top: 680px;
+  margin-top: 0px;
   width: 100%;
 }
 
 .section-2 .left {
   width: 100%;
-  height: 250px;
+  height: 240px;
+  margin-top: -3px;
 }
+
+.section-2 .right .right-first .inner h1{
+  color: #fff;
+  font-size: 20px;
+  padding: 0;
+  margin-left: 20%;
+  margin-top: 10px;
+  margin-bottom: -2px;
+}
+
+.section-2 .right .right-first .inner p{
+  color: #fff;
+  font-size: 16px;
+  padding: 0;
+  margin-left: 5%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.section-2 .right .right-second{
+  width: 100%;
+  background: #96C9C1;
+  margin-bottom: -5px;
+}
+
+.section-2 .right .right-second .inner{
+  width: 100%;
+  padding:16px;
+}
+
+.btn-4x {
+  background: #eab25b;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 0px;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-left: 20%;
+  margin-top: 10px;
+}
+
 
 .section-2 .right {
   width: 100%;
@@ -588,11 +611,12 @@ color: green;
 
 .section-2 .right .right-first {
   width: 100%;
-  height: 200px;
+  height: 125px;
+  margin-bottom: -4px;
 }
 
 .section-2 .right .right-first .inner {
-  width: 70%;
+  width:100%;
 }
 
 .btn-4 {
@@ -601,21 +625,40 @@ color: green;
   font-weight: bold;
   color: #fff;
   padding: 2px 10px;
-  margin: 15px 10px 10px 42px;
+  margin: 0px;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 5px;
   float: left;
 }
 
+
 .section-2 .right .inner {
   margin: 5px auto;
-}
-
-.btn-4 {
-  margin: 55px 10px 10px 42px;
 }
 
 .section-2 .right .inner .p1 {
   text-align: center;
   color: #fff;
+}
+
+.btn-3{
+  margin: 10px 0 10px 27% !important;
+}
+
+.btn-5{
+
+  margin: 20px 20px 20px 30% !important;
+  padding: 4px 25px !important;
+}
+
+
+.fml {
+  margin-left: 0;
+}
+
+.footer .footer-container .footer-box {
+  width: 100%;
+  float: left;
+  padding-right: 40px;
+}
 }
