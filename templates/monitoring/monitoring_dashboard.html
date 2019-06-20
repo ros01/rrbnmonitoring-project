@@ -1,4 +1,4 @@
-{% extends 'registrars_office/registrar_base.html'%}
+{% extends 'monitoring/monitoring_base.html'%}
 {% load static %}
 {% block title%}| M&E Dashboard {% endblock %}
 {% block styles %}
@@ -101,6 +101,17 @@
           <!--End of body-->
           </div>
         </div>
+        <script>
+            let urlMenu = document.getElementById('dropdown');
+            urlMenu.onchange = function(){
+              let userOption = this.options[this.selectedIndex];
+              if(userOption.value != "nothing"){
+                window.open(userOption.value, "_self", "");
+              }
+            }
+          </script>
+        </body>
+        </html>
 
 
 <!--BODY ENDS-->

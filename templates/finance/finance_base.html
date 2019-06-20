@@ -38,15 +38,15 @@
               <select name="dropdown" id="dropdown">
                 <option value="nothing" selected="selected">Go To</option>
                 <option value="">Dashboard</option>
-                <option value="http://www.google.com">List Application</option>
-                <option value="http://www.onetreedev.com">Verify Application</option>
-                <option value="#">Schedule Inspections</option>
-                <option value="#">Inspection Schedules</option>
-                <option value="">Inspection Reports</option>
-                <option value="">Hospital Lookup</option>
-                <option value="">License Lookup</option>
-                <option value="">Zonal Offices List</option>
-                <option value="">License Fees</option>
+                <option value="">List Payment Entries</option>
+                <option value="">Process Payments</option>
+                <option value="#">View Online Payments</option>
+                <option value="#">View Bank Payments</option>
+                <option value="{% url 'hospitals_lookup' %}">Hospitals/Centers Lookup</option>
+                <option value="{% url 'licenses_lookup' %}">Radiography License Lookup</option>
+                <option value="{% url 'rrbn_offices' %}">List of RRBN Zonal Offices</option>
+                <option value="">License Categories & Fees</option>
+                <option value="">Document Verification Service</option>
                 <option value="">BI Reports</option>
                 <option value="">My User Account</option>
               </select>
@@ -98,3 +98,15 @@
         </div>
       </div>
     </div>
+
+    <script>
+        let urlMenu = document.getElementById('dropdown');
+        urlMenu.onchange = function(){
+          let userOption = this.options[this.selectedIndex];
+          if(userOption.value != "nothing"){
+            window.open(userOption.value, "_self", "");
+          }
+        }
+      </script>
+  </body>
+  </html>

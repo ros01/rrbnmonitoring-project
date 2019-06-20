@@ -35,32 +35,69 @@
       </div>
       <div class="section-1">
         <div class="dropdown">
+          {% if user.profile.role == "Registrar" %}
           <select name="dropdown" id="dropdown">
             <option value="nothing" selected="selected">Go To</option>
-            <option value=
-            {% if user.profile.role == "Registrar" %}
-            "{% url 'registrar_dashboard' %}"
-            {% elif user.profile.role == "Monitoring" %}
-            "{% url 'monitoring_dashboard' %}"
-            {% elif user.profile.role == "Finance" %}
-            "{% url 'finance_dashboard' %}"
-            {% else %}
-            "{% url 'zonal_offices_dashboard' %}"
-            {% endif %}
-            >Dashboard</option>
-
-            <option value="#">List Application</option>
-            <option value="#">Verify Application</option>
-            <option value="#">Schedule Inspections</option>
-            <option value="#">Inspection Schedules</option>
-            <option value="">Inspection Reports</option>
-            <option value="{% url 'hospitals_lookup' %}">Hospital Lookup</option>
-            <option value="{% url 'licenses_lookup' %}">License Lookup</option>
-            <option value="{% url 'rrbn_offices' %}">Zonal Offices List</option>
-            <option value="">License Fees</option>
-            <option value="">BI Reports</option>
-            <option value="">My User Account</option>
+            <option value="{% url 'registrar_dashboard' %}">Dashboard</option>
+            <option value="#">Licences Awaiting Aproval</option>
+            <option value="#">List of Issued Licences</option>
+            <option value="#">Reports & Analytics</option>
+            <option value="#">My User Account</option>
+            <option value="{% url 'hospitals_lookup' %}">Hospitals/Center Lookup</option>
+            <option value="{% url 'licenses_lookup' %}">Radiography Practice License Lookup</option>
+            <option value="{% url 'rrbn_offices' %}">List of RRBN Zonal Offices</option>
+            <option value="">License Categories & Fees</option>
+            <option value="">Document Verification Service</option>
           </select>
+          {% elif user.profile.role == "Monitoring" %}
+          <select name="dropdown" id="dropdown">
+            <option value="nothing" selected="selected">Go To</option>
+            <option value="{% url 'monitoring_dashboard' %}">Dashboard</option>
+            <option value="#">List Application Entries</option>
+            <option value="#">Verify Application Documents</option>
+            <option value="#">Schedule Inspections</option>
+            <option value="#">Inspections Schedule list</option>
+            <option value="#">Inspection Reports</option>
+            <option value="{% url 'hospitals_lookup' %}">Hospitals/Center Lookup</option>
+            <option value="{% url 'licenses_lookup' %}">Radiography Practice License Lookup</option>
+            <option value="{% url 'rrbn_offices' %}">List of RRBN Zonal Offices</option>
+            <option value="">License Categories & Fees</option>
+            <option value="">Document Verification Service</option>
+            <option value="#">BI Reports</option>
+            <option value="#">My User Account</option>
+          </select>
+          {% elif user.profile.role == "Finance" %}
+          <select name="dropdown" id="dropdown">
+            <option value="nothing" selected="selected">Go To</option>
+            <option value="{% url 'finance_dashboard' %}">Dashboard</option>
+            <option value="#">List Payment Entries</option>
+            <option value="#">Process Payments</option>
+            <option value="#">View Online Payments</option>
+            <option value="#">View Bank Payments</option>
+            <option value="{% url 'hospitals_lookup' %}">Hospitals/Center Lookup</option>
+            <option value="{% url 'licenses_lookup' %}">Radiography Practice License Lookup</option>
+            <option value="{% url 'rrbn_offices' %}">List of RRBN Zonal Offices</option>
+            <option value="">License Categories & Fees</option>
+            <option value="">Document Verification Service</option>
+            <option value="#">BI Reports</option>
+            <option value="#">My User Account</option>
+          </select>
+          {% else %}
+          <select name="dropdown" id="dropdown">
+            <option value="nothing" selected="selected">Go To</option>
+            <option value="{% url 'zonal_offices_dashboard' %}">Dashboard</option>
+            <option value="#">Schedule Inspections</option>
+            <option value="#">Inspections Schedule list</option>
+            <option value="#">Inspection Reports</option>
+            <option value="{% url 'hospitals_lookup' %}">Hospitals/Center Lookup</option>
+            <option value="{% url 'licenses_lookup' %}">Radiography Practice License Lookup</option>
+            <option value="{% url 'rrbn_offices' %}">List of RRBN Zonal Offices</option>
+            <option value="">License Categories & Fees</option>
+            <option value="">Document Verification Service</option>
+            <option value="#">BI Reports</option>
+            <option value="#">My User Account</option>
+          </select>
+          {% endif %}
         </div>
         <button class="btn-orage"><a href="{% url 'logout' %}">Log Out </a>
           <i class="fa fa-power-off"></i>
