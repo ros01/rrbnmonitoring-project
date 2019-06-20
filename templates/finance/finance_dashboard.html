@@ -1,8 +1,8 @@
 {% extends 'registrars_office/registrar_base.html'%}
 {% load static %}
-{% block title%}| M&E Dashboard {% endblock %}
+{% block title%}| Zonal Offices Dashboard {% endblock %}
 {% block styles %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/mehq-module.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/finance.css' %}" />
 {% endblock %}
 
 
@@ -13,29 +13,19 @@
 <div class="mehq-container">
           <div class="section-1">
             <div class="first">
-                <i class="fa fa-hourglass-half"></i><p>Pending Doc verification</p>
+                <i class="fa fa-hourglass-half"></i><p>Due for Payment</p>
                 <h2>21</h2>
-                <p class="para">6 Verified  Applications[Yr 2019]</p>
+                <p class="para">6 Processed Payments[Yr 2019]</p>
             </div>
             <div class="first">
-                <i class="fa fa-money-bill-alt"></i><p>Due for Payment</p>
-                <h2>3</h2>
-                <p class="para">2 Processed Payment[Yr 2019]</p>
+                <i class="fa fa-money-bill-alt"></i><p>Total Payments Today</p>
+                <h2>13</h2>
+                <p class="para">2 Total Payments for [Yr 2019]</p>
             </div>
             <div class="first">
-                <i class="fa fa-clock"></i><p>Due for Inspection</p>
-                <h2>0</h2>
-                <p class="para">0 Inspections[Yr 2019]</p>
-            </div>
-            <div class="first">
-                <i class="fa fa-lightbulb"></i><p>Pending inspections</p>
-                <h2>0</h2>
-                <p class="para">0 Completed Inspections[Yr 2019]</p>
-            </div>
-            <div class="first">
-                <i class="fa fa-share-square"></i><p>Awaiting inc. Approval</p>
-                <h2>0</h2>
-                <p class="para">0 Approved inspections[Yr 2019]</p>
+                <i class="fa fa-lightbulb"></i><p>Total Amounts Paid for the Month</p>
+                <h2>N500,000</h2>
+                <p class="para">0 Total Amount Paid for [Yr 2019]</p>
             </div>
           </div>
 
@@ -46,9 +36,9 @@
                     <img src="{% static 'img/orange_verified_user.png' %}" alt="">
                   </div>
                   <div class="two">
-                    <p class="big">Process Applications</p>
-                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="http://">List Applications Entries</a></span><br>
-                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Verify Application Documents</a></span><br>
+                    <p class="big">Process Payments</p>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="http://">List Payment Entries</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Process Fee Payments</a></span><br>
                   </div>
               </div>
               <div class="inner">
@@ -56,10 +46,9 @@
                     <img src="{% static 'img/orange_incandescent.png' %}" alt="">
                   </div>
                   <div class="two">
-                    <p class="big">Inspections</p>
-                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Schedule Inspections</a></span><br>
-                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Inspection Schedules List</a></span><br>
-                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Inspection Reports</a></span><br>
+                    <p class="big">View Payment Details</p>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">View Online Payments</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">View Bank Payments</a></span>
                   </div>
               </div>
               <div class="inner">
@@ -85,7 +74,7 @@
                     <img src="{% static 'img/orane_dvr.png' %}" alt="">
                   </div>
                   <div class="two">
-                      <p class="big">Process Applications</p>
+                      <p class="big">Reports & Analytics</p>
                       <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">BI reports</a> </span><br>
                     </div>
               </div>
@@ -101,8 +90,6 @@
           <!--End of body-->
           </div>
         </div>
-
-
 <!--BODY ENDS-->
 
 {% endblock %}

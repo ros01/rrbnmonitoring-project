@@ -157,7 +157,7 @@ nav .nav-container .section-1 button i{
   /*SELECTION CSS ENDS*/
 
  .section-1 .first{
-  width: 20%;
+  width: 33%;
   height: 150px;
   border: 1px 0 1px 1px solid black;
   padding-top: 15px;
@@ -171,6 +171,7 @@ nav .nav-container .section-1 button i{
   padding-top: 16px;
   padding-right: 5px;
   color: #32776B;
+  margin-left: 12%;
  }
 
  .section-1 .first h2{
@@ -178,8 +179,13 @@ nav .nav-container .section-1 button i{
   padding-bottom: 5px;
  }
 
+ .section-1 .first p{
+  margin-left: 15%;
+ }
+
  .section-1 .first .para{
    font-size: 14px;
+   margin-left: 13%;
  }
 
  .section-1 button{
@@ -421,6 +427,11 @@ nav .nav-container .section-1 button{
   display: block;
 } 
 
+.dropdown select{
+  margin-left: 0px;
+  width: 280px;
+}
+
 .section-1 .first{
   width: 100%;
   height: auto;
@@ -435,13 +446,13 @@ nav .nav-container .section-1 button{
   float: none;
   padding-top: 16px;
   padding-right: 0;
-  padding-left: 12%;
+  padding-left: 22%;
   font-size: 30px;
  }
 
  .section-1 .first p{
   float: none;
-  margin-left: 2%;
+  margin-left: 20%;
 }
 
 .section-1 .first .para{
@@ -450,7 +461,7 @@ nav .nav-container .section-1 button{
 
  .section-1 .first h2{
   padding-bottom: 5px;
-  margin-left: 12%;
+  margin-left: 30%;
  }
 
  .section2 {

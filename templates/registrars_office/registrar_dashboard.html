@@ -1,0 +1,99 @@
+{% extends 'registrars_office/registrar_base.html'%}
+{% load static %}
+{% block title%}| M&E Dashboard {% endblock %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/registrar_office.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+
+
+<!--BODY STARTS-->
+<div class="mehq-container">
+          <div class="section-1">
+            <div class="first">
+                <i class="fa fa-hourglass-half"></i><p>Awaiting Registrar's Approval</p>
+                <h2>21</h2>
+                <p class="para">6 Registrar's Approval[Yr 2019]</p>
+            </div>
+            <div class="first">
+                <i class="fa fa-clock"></i><p>Awaiting Issuance
+                <h2>3</h2>
+                <p class="para">2 Issued Licences[Yr 2019]</p>
+            </div>
+            <div class="first">
+                <i class="fa fa-chart-line"></i><p>Total Active Licences</p>
+                <h2>0</h2>
+                <p class="para">0 Expired Licences</p>
+            </div>
+            <div class="first">
+                <i class="fa fa-lightbulb"></i><p>Expiring in less than one Month</p>
+                <h2>0</h2>
+                <p class="para">0 Expiring in 3 Months</p>
+            </div>
+          </div>
+
+          <div class="section2">
+
+              <div class="inner">
+                  <div class="one">
+                    <img src="{% static 'img/orange_verified_user.png' %}" alt="">
+                  </div>
+                  <div class="two">
+                    <p class="big">Licence Approval</p>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="http://">Licences Awaiting Approval</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">List of Issued Licences</a></span><br>
+                  </div>
+              </div>
+              <div class="inner">
+                  <div class="one">
+                    <img src="{% static 'img/orane_dvr.png' %}" alt="">
+                  </div>
+                  <div class="two">
+                    <p class="big">Inspections</p>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Reports & Analytics</a></span>
+                  </div>
+              </div>
+              <div class="inner">
+                  <div class="one">
+                    <img src="{% static 'img/orange_person.png' %}" alt="">
+                  </div>
+                  <div class="two">
+                    <p class="big">My Portal Account</p>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">My User Account</a> </span><br>
+                  </div>
+              </div>
+          <!--End of body-->
+          </div>
+
+          <div class="section3">
+
+              <div class="inner">
+                  <div class="one">
+                    <img src="{% static 'img/orange_build.png' %}" alt="">
+                  </div>
+                  <div class="two">
+                    <p class="big">Utilities</p>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="{% url 'hospitals_lookup' %}">Hospital/Center Lookup</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="{% url 'licenses_lookup' %}">Hospitals Radiography Practice Lokup</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="{% url 'rrbn_offices' %}">List of RRBN Zonal offices</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Licence Categories and Processing Fees</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Document Verification Service</a></span><br>
+                  </div>
+              </div>
+
+          <!--End of body-->
+          </div>
+        </div>
+<!--BODY ENDS-->
+<script>
+    let urlMenu = document.getElementById('dropdown');
+    urlMenu.onchange = function(){
+      let userOption = this.options[this.selectedIndex];
+      if(userOption.value != "nothing"){
+        window.open(userOption.value, "_self", "");
+      }
+    }
+</script>
+{% endblock %}

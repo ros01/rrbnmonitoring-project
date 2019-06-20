@@ -36,8 +36,8 @@
 }
 
 .form input{
-  width: 90%; 
-  height: 30px; 
+  width: 90%;
+  height: 30px;
   padding: 15px;"
 }
 
@@ -221,7 +221,7 @@
 		text-decoration: none;
 		letter-spacing: 2px;
     padding-right: 30px;
-    
+
 	}
 	.slide a:after{
 		content: " \f140";
@@ -261,7 +261,7 @@
 		border: 2px solid rgba(255,255,255,.8);
 		background: transparent;
   }
-  
+
 
 /*section 1 right ends*/
 .clear{
@@ -468,7 +468,7 @@ color: green;
 
 .footer .footer-container .footer-box {
   width: 100%;
-  float: left;
+  float: none;
   padding-right: 40px;
 }
 }

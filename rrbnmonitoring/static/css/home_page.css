@@ -322,6 +322,10 @@ ul li ul li a{
 
 /*SLIDER MOBILE CSS STARTS */
 
+.section-1 .right .con-slider{
+  width:100%;
+}
+
 .push{
   width:100%;
   margin:10px 0;

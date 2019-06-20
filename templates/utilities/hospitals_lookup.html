@@ -1,4 +1,4 @@
-{% extends 'monitoring/monitoring_base.html'%}
+{% extends 'registrars_office/registrar_base.html'%}
 {% load static %}
 {% block title%}| Hospitals Look Up {% endblock %}
 {% block styles %}
@@ -68,6 +68,15 @@
   <script src="{% static 'js/dataTables.bootstrap.min.js' %}"></script>
   <script>
   $('#mydata').dataTable();
+
+  let urlMenu = document.getElementById('dropdown');
+  urlMenu.onchange = function(){
+    let userOption = this.options[this.selectedIndex];
+    if(userOption.value != "nothing"){
+      window.open(userOption.value, "_self", "");
+    }
+  }
   </script>
+
 
 {% endblock %}

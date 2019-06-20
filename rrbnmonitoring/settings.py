@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'finance.apps.FinanceConfig',
+    'profiles.apps.ProfilesConfig',
     'pages.apps.PagesConfig',
     'services.apps.ServicesConfig',
     'hospitals.apps.HospitalsConfig',
@@ -38,7 +40,6 @@ INSTALLED_APPS = [
     'utilities.apps.UtilitiesConfig',
     'zonal_offices.apps.ZonalOfficesConfig',
     'registrars_office.apps.RegistrarsOfficeConfig',
-    'accounts.apps.AccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -89,7 +90,7 @@ WSGI_APPLICATION = 'rrbnmonitoring.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rrbnmonitoring',
+        'NAME': 'rrbnmonitoringdb',
         'USER': 'postgres',
         'PASSWORD': 'blackstone1',
         'HOST': 'localhost',

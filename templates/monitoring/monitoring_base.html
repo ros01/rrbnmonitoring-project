@@ -14,34 +14,48 @@
     <title>RRBN Monitor}ing Portal</title>
 </head>
 <body>
-    <div class="container">
-      <div class="header">
-        <div class="logo-box">
-          <a class="logo" href="#">
-          <img src="{% static 'img/rrbn-logo.png' %}" alt="rrbn logo" /></a>
-        </div>
-        <div class="clearfix"></div>
+  <div class="container">
+    <div class="header">
+      <div class="logo-box">
+        <a class="logo" href="#"
+          ><img src="{% static 'img/rrbn-logo.png' %}" alt="rrbn logo"
+        /></a>
       </div>
-      <nav>
-        <div class="nav-container">
-          <div class="section-1">
-            <i class="fa fa-cogs"></i><span class="push-down white">M&E HQ Module</span>
-          </div>
-          <div class="section-1">
-              <i class="fa fa-user-cog"></i><span class="push-down white">{{user.first_name}} {{user.last_name}}</span>
-          </div>
-          <div class="section-1">
-            <button class="btn-orage">Go To <i class="fa fa-arrow-circle-down"></i> </button>
-            <a href="javascript:{document.getElementById('logout').submit()}">
-            <button class="btn-orage"> <a href="{% url 'logout' %}">Log Out </a> <i class="fa fa-power-off"></i> </button>
-            </a>
-            <form action="{% url 'logout' %}" method="POST" id="logout">
-                {% csrf_token %}
-                <input type="hidden">
-              </form>
-          </div>
+      <div class="clearfix"></div>
+    </div>
+    <nav>
+      <div class="nav-container">
+        <div class="section-1">
+          <i class="fa fa-cogs"></i><span class="push-down white">{{ user.profile.module_name }}</span>
         </div>
-      </nav>
+        <div class="section-1">
+            <i class="fa fa-user-cog"></i><span class="push-down white">{{ user.first_name }} {{ user.last_name }}</span>
+        </div>
+        <div class="section-1">
+          <div class="dropdown">
+            <select name="dropdown" id="dropdown">
+              <option value="nothing" selected="selected">Go To</option>
+              <option value="">Dashboard</option>
+              <option value="http://www.google.com">List Application</option>
+              <option value="http://www.onetreedev.com">Verify Application</option>
+              <option value="#">Schedule Inspections</option>
+              <option value="#">Inspection Schedules</option>
+              <option value="">Inspection Reports</option>
+              <option value="">Hospital Lookup</option>
+              <option value="">License Lookup</option>
+              <option value="">Zonal Offices List</option>
+              <option value="">License Fees</option>
+              <option value="">BI Reports</option>
+              <option value="">My User Account</option>
+            </select>
+          </div>
+          <button class="btn-orage"><a href="{% url 'logout' %}">Log Out </a>
+            <i class="fa fa-power-off"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
 
   {% block content%} {%endblock%}
 
@@ -74,11 +88,11 @@
         <div class="footer-box">
           <p class="fp">Contact Us</p>
           <p class="fp2">
-            Plot 6, Block 7, Ishaya shekari crescent off wole soyinka road 2nd
-            Avenue, setraco, <br>Gwarimpa - Abuja, Nigeria.
+            Federal Secretariat Complex, Phase 1 Annex III, 4th Floor,
+            <br>Central Area - Abuja, Nigeria.
           </p>
-          <p class="fp2">+234 092914928</p>
-          <p class="fp2">info@rrbn.gov.ng</p>
+          <p class="fp2">+234 092914928, 08039472126, 08097995066</p>
+          <p class="fp2">info@rrbn.gov.ng, monitoring@rrbn.gov.ng</p>
           <p class="fp2">www.rrbn.gov.ng</p>
         </div>
       </div>

@@ -121,7 +121,6 @@ nav .nav-container .section-1 button i{
  
  .section-1{
    width: 100%;
-   margin: 0 auto;
    display: flex;
 }
 
@@ -195,6 +194,107 @@ nav .nav-container .section-1 button i{
    cursor: pointer;
  }
 
+ .section-2{
+   background: rgb(213, 239, 255);
+   display: flex;
+   padding: 3px;
+   margin-bottom: 10px;;
+ }
+
+ .section-2 i{
+  color: rgb(60, 60, 224);
+  font-size: 40px;
+  margin: 1.6% 30px 0 10px;
+}
+
+.section-2 span{
+  color: rgb(26, 127, 190);
+}
+
+ .seca{
+  width: 30%;
+  float: left;
+  border: 2px solid rgba(218, 218, 218, 0.39);
+  height: 290px;
+  padding: 10px;
+  background-color: rgb(255, 250, 250);
+ }
+
+ .seca .first{
+   background: rgb(185, 228, 255);
+   width: 100%;
+   height: 45px;
+ }
+
+ .seca .first i{
+  color: #fff;
+  font-size: 24px;
+  padding:10px;
+}
+
+.seca .second .content-table{
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+}
+
+
+.seca .second .content-table tr{
+  border-bottom: 1px solid #ddd;
+}
+
+.seca .second .content-table tr:hover{
+  background-color: antiquewhite;
+  cursor: pointer;
+}
+
+.seca .second .content-table td{
+  padding: 0 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ .secb{
+  width: 70%;
+  float: left;
+ }
+
+ .seca .third{
+  background: rgb(185, 228, 255);
+  width: 100%;
+  height: 45px;
+  margin-top: 5px;
+  display: flex;
+}
+
+.seca .third i{
+ color: #fff;
+ font-size: 24px;
+ padding:10px 
+}
+
+.seca .third span{
+  margin-top: 10px;
+ }
+
+
+.seca .forth{
+  background: rgb(185, 228, 255);
+  width: 100%;
+  height: 45px;
+  margin-top: 5px;
+  display: flex;
+}
+
+.seca .forth img{
+  width: 15%;
+  padding: 6px;
+}
+
+.seca .forth span{
+  margin-top: 10px;
+}
+
  .section2 {
    width: 100%;
    height: auto;
@@ -202,9 +302,10 @@ nav .nav-container .section-1 button i{
    display: flex;
  }
  .section2 .inner{
-   width: 33.3%;
+   width: 47%;
    height: auto;
    display: flex;
+   margin-left: 3%;
  }
 
  .section2 .inner:hover{
@@ -248,10 +349,11 @@ nav .nav-container .section-1 button i{
 }
 
 .section3 .inner{
-  width: 33.3%;
+  width: 47%;
   height: auto;
   display: flex;
   padding: 20px;
+  margin-left: 3%;
 }
 
 .section3 .inner:hover{
@@ -420,6 +522,20 @@ nav .nav-container .section-1 button{
   margin: 0;
   display: block;
 } 
+
+.dropdown select{
+  width: 280px;
+  margin-left: 0px;
+}
+
+.seca{
+  width: 100%;
+  float: none;
+  border: 2px solid rgb(218, 218, 218);
+  height: 300px;
+  padding: 10px;
+  background-color: rgb(247, 243, 243);
+ }
 
 .section-1 .first{
   width: 100%;

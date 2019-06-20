@@ -1,8 +1,8 @@
-{% extends 'registrars_office/registrar_base.html'%}
+{% extends 'zonal_offices/zonal_office_base.html' %}
 {% load static %}
-{% block title%}| M&E Dashboard {% endblock %}
+{% block title%}| Zonal Offices Dashboard {% endblock %}
 {% block styles %}
-<link rel="stylesheet" type="text/css" href="{% static 'css/mehq-module.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/zonal_office_module.css' %}" />
 {% endblock %}
 
 
@@ -11,46 +11,46 @@
 
 <!--BODY STARTS-->
 <div class="mehq-container">
-          <div class="section-1">
+          <div class="section-2">
+              <i class="fa fa-info-circle"></i>
+              <span>Dear {{user.profile.module_name }} user<br>Welcome to the Zonal Office Console<br>You can easily manage Inspections schedules, Upload Inspection Reports, access numerous operational reports etc.</span>
+          </div>
+          <div class="seca">
             <div class="first">
-                <i class="fa fa-hourglass-half"></i><p>Pending Doc verification</p>
-                <h2>21</h2>
-                <p class="para">6 Verified  Applications[Yr 2019]</p>
+              <i class="fa fa-list"></i>
+              <span>Centers/Hospitals Inspection Reports</span>
             </div>
-            <div class="first">
-                <i class="fa fa-money-bill-alt"></i><p>Due for Payment</p>
-                <h2>3</h2>
-                <p class="para">2 Processed Payment[Yr 2019]</p>
+            <div class="second">
+              <table class="content-table">
+                <tr>
+                  <td>Total Pending Inspections: </td>
+                  <td style="color:gold;">1</td>
+                </tr>
+                <tr>
+                  <td>Total Completed Inspections: </td>
+                  <td style="color:red;">3</td>
+                </tr>
+                <tr>
+                  <td>Total Elapsed Deadlines: </td>
+                  <td style="color:blue;">0</td>
+                </tr>
+                <tr>
+                  <td>Inspections Scheduled for Today: </td>
+                  <td style="color:red;">6</td>
+                </tr>
+              </table>
             </div>
-            <div class="first">
-                <i class="fa fa-clock"></i><p>Due for Inspection</p>
-                <h2>0</h2>
-                <p class="para">0 Inspections[Yr 2019]</p>
+            <div class="third">
+              <i class="fa fa-arrow-circle-down"></i>
+              <span>Centers/Hospitals Inspection Reports</span>
             </div>
-            <div class="first">
-                <i class="fa fa-lightbulb"></i><p>Pending inspections</p>
-                <h2>0</h2>
-                <p class="para">0 Completed Inspections[Yr 2019]</p>
-            </div>
-            <div class="first">
-                <i class="fa fa-share-square"></i><p>Awaiting inc. Approval</p>
-                <h2>0</h2>
-                <p class="para">0 Approved inspections[Yr 2019]</p>
+            <div class="forth">
+              <img src="{% static 'img/word.png' %}" alt="word image">
+              <span>Hospitls/Centers Inspection Template</span>
             </div>
           </div>
-
+          <div class="secb">
           <div class="section2">
-
-              <div class="inner">
-                  <div class="one">
-                    <img src="{% static 'img/orange_verified_user.png' %}" alt="">
-                  </div>
-                  <div class="two">
-                    <p class="big">Process Applications</p>
-                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="http://">List Applications Entries</a></span><br>
-                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Verify Application Documents</a></span><br>
-                  </div>
-              </div>
               <div class="inner">
                   <div class="one">
                     <img src="{% static 'img/orange_incandescent.png' %}" alt="">
@@ -58,13 +58,13 @@
                   <div class="two">
                     <p class="big">Inspections</p>
                     <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Schedule Inspections</a></span><br>
-                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Inspection Schedules List</a></span><br>
-                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Inspection Reports</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Inspection Schedule List</a></span><br>
+                    <i class="fa fa-check-circle"></i><span class="font-up"><a href="#">Inspection Report</a></span><br>
                   </div>
               </div>
               <div class="inner">
                   <div class="one">
-                    <img src="{% static 'img/orange_build.png' %}" alt="">
+                      <img src="{% static 'img/orange_build.png' %}" alt="">
                   </div>
                   <div class="two">
                     <p class="big">Utilities</p>
@@ -101,8 +101,7 @@
           <!--End of body-->
           </div>
         </div>
-
-
+        </div>
 <!--BODY ENDS-->
 
 {% endblock %}
