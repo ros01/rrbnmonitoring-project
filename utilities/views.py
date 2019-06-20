@@ -5,6 +5,7 @@ from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from .models import Hospital, License
 from django.http import HttpResponse
 
+@login_required
 def index(request):
   hospital = Hospital.objects.all()
 
@@ -13,6 +14,7 @@ def index(request):
   }
   return render(request, 'utilities/hospitals_lookup.html', context)
 
+@login_required
 def licenses(request):
   license = License.objects.all()
 
@@ -21,5 +23,6 @@ def licenses(request):
   }
   return render(request, 'utilities/licenses_lookup.html', context)
 
+@login_required
 def offices(request):
   return render(request, 'utilities/rrbn_offices.html')
