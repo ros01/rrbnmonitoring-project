@@ -24,8 +24,9 @@ SECRET_KEY = '7qg@m2$b4xi0))!v**jwjrv*kd2b83@wtw9ijsupw47)($^c3a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+#DEBUG = False
 ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['127.0.0.1','localhost']
 
 
 # Application definition
@@ -37,7 +38,8 @@ INSTALLED_APPS = [
     'services.apps.ServicesConfig',
     'hospitals.apps.HospitalsConfig',
     'monitoring.apps.MonitoringConfig',
-    'utilities.apps.UtilitiesConfig',
+    'crispy_forms',
+    #'utilities.apps.UtilitiesConfig',
     'zonal_offices.apps.ZonalOfficesConfig',
     'registrars_office.apps.RegistrarsOfficeConfig',
     'django.contrib.admin',
@@ -49,7 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     #third party APP_DIRS
-    #'cripsy_forms',
+
     #'registration',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -136,7 +138,7 @@ USE_TZ = True
 STATIC_ROOT=os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 STATICFILES_DIRS=[
-    os.path.join(BASE_DIR, 'rrbnmonitoring/static')
+    os.path.join(BASE_DIR, 'rrbnmonitoring/static/')
 ]
 
 # Media Folder Settings
@@ -148,6 +150,13 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
+
+# Email config
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER='blueacetechng@gmail.com'
+EMAIL_HOST_PASSWORD='blackstone123'
+EMAIL_USE_TLS=True
 
 
 

@@ -11,5 +11,8 @@ urlpatterns = [
     path('monitoring/', include ('monitoring.urls')),
     path('registrars_office/', include ('registrars_office.urls')),
     path('zonal_offices/', include ('zonal_offices.urls')),
-    path('utilities/', include ('utilities.urls')),
+    path('hospitals/', include ('hospitals.urls')),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404 = 'pages.views.error_404_view'

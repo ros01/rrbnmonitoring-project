@@ -1,17 +1,20 @@
 <!--NAV STARTS HERE-->
-<nav>
+
+
+  <nav>
     <ul>
       <li><a href="{% url 'index' %}" class="active">HOME <span class="fa fa-home"></span> </a></li>
       <li><a href="{% url 'about' %}">ABOUT</a></li>
       <li><a href="#">SERVICES<span class="ml"> <i class="fa fa-angle-double-down ml"></i></span></a>
         <ul>
-            <li><a href="#">Register Practice</a></li>
+            <li><a href="{% url 'accept' %}">Register Practice</a></li>
             <li><a href="#">Renew Practice</a></li>
             <li><a href="#">Reopen Practice</a></li>
             <li><a href="#">Validate Practice</a></li>
+            <li><a href="#">Internship Accreditation</a></li>
         </ul>
       </li>
-      <li><a href="#">HELP<span class="ml"> <i class="fa fa-angle-double-down ml"></i></span></i></a>
+      <li><a href="#">HELP<span class="ml"> <i class="fa fa-angle-double-down ml"></i></span></a>
         <ul>
             <li><a href="{% url 'guidelines' %}">Guidelines</a></li>
             <li><a href="{% url 'faq' %}">FAQ</a></li>
@@ -21,5 +24,11 @@
       </li>
       <li><a href="{% url 'contact' %}">CONTACT US</a></li>
     </ul>
-  </nav>
+    </nav>
+
+
+
+
+
+
 <!--NAV ENDS HERE-->

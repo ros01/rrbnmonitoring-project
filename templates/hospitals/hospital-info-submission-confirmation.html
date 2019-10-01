@@ -1,0 +1,63 @@
+{% extends 'base-reg.html'%}
+{% load static %}
+{% block title%}| Welcome {% endblock %}
+{% block content %}
+<main class="container">
+
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <img class="progress mb-5" src="{% static 'img/progress_bar.jpg' %}" alt="progress bar">
+            </div>
+        </div>
+
+        <div class="row bg-success rounded">
+            <div class="col-md-6 m-auto">
+                <span class="fa fa-check text-white text-center pl-5 pt-2 w-75"></span>
+                <p class="text-white pt-2 tetx-center">Your interest to register your hospital / clinic has been submitted successfully to RRBN. We will verify your details and document(s), Thank you. </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-6 mt-3">
+                <div class="col-md-12">
+                    <div class="row">
+                        <span class="col-5">Hospital Name:</span>
+                        <span class="col-6"><strong>{{centre.centre_name}}</strong></span>
+                    </div>
+                    <div class="row">
+                        <span class="col-5">RC Number:</span>
+                        <span class="col-6 "><strong>{{centre.rc_number}}</strong></span>
+                    </div>
+                    <div class="row">
+                        <span class="col-5">Phone:</span>
+                        <span class="col-6"><strong>{{centre.phone}}</strong></span>
+                    </div>
+                    <div class="row">
+                        <span class="col-5">Email:</span>
+                        <span class="col-6"><strong>{{centre.email}}</strong></span>
+                    </div>
+                    <div class="row">
+                        <span class="col-5">State:</span>
+                        <span class="col-6"><strong>{{centre.state}}</strong></span>
+                    </div>
+                    <div class="row">
+                        <span class="col-5">City:</span>
+                        <span class="col-6"><strong>{{centre.city}}</strong></span>
+                    </div>
+                    <div class="row">
+                        <span class="col-5">Address:</span>
+                        <span class="col-6"><strong>{{centre.address}}</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <div class="row justify-content-md-center mt-3">
+                <div class="col-md-6">
+                    <div class="col-md-9">
+                        <button type="button" name="cancel" class="btn btn-danger">&times; Cancel</button>
+                    </div>
+                </div>
+            </div>
+    </main>
+{% endblock %}

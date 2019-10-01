@@ -50,7 +50,11 @@
                 <option value="">My User Account</option>
               </select>
             </div>
-            <button class="btn-orage"><a href="{% url 'logout' %}">Log Out </a>
+            <button class="btn-orage"><a href="javascript:{document.getElementById('logout').submit()}" onclick="">Logout</a>
+              <form id="logout" method="POST" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <input type="hidden" />
+              </form>
               <i class="fa fa-power-off"></i>
             </button>
           </div>

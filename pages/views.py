@@ -7,6 +7,12 @@ def index(request):
 def about(request):
     return render(request, 'pages/about.html')
 
+def get_object_or_404(request):
+    return render(request, 'pages/404.html')
+
+def error_404_view(request, exception):
+    return render(request,'pages/404.html')
+
 def contact(request):
     return render(request, 'pages/contact.html')
 

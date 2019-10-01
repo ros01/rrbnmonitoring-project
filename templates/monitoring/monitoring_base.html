@@ -5,123 +5,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'css/dataTables.bootstrap.min.css' %}" rel="stylesheet">
-  <link href="{% static 'fontawesome-free-5.8.2-web/css/all.css' %}" rel="stylesheet">
-<!--  <link href="{% static 'css/main.css' %}" rel="stylesheet"> -->
-    {% block styles %} {% endblock %}
+  <link rel="stylesheet" type="text/css" href="{% static 'fontawesome-free-5.8.2-web/css/all.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/styles-reg.css' %}">
 
-    <title>RRBN Monitor}ing Portal</title>
+  {% block styles %} {% endblock %}
+  <title>RRBN Monitoring Portal {% block title %}{% endblock %}</title>
 </head>
+
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="logo-box">
-        <a class="logo" href="#"
-          ><img src="{% static 'img/rrbn-logo.png' %}" alt="rrbn logo"
-        /></a>
-      </div>
-      <div class="clearfix"></div>
-    </div>
-    <nav>
-      <div class="nav-container">
-        <div class="section-1">
-          <i class="fa fa-cogs"></i><span class="push-down white">{{ user.profile.module_name }}</span>
+    <header>
+        <div class="row">
+            <div class="col-md-5 m-2">
+                <img class="logo ml" src="{% static 'img/rrbn-logo.png' %}" alt="">
+            </div>
         </div>
-        <div class="section-1">
-            <i class="fa fa-user-cog"></i><span class="push-down white">{{ user.first_name }} {{ user.last_name }}</span>
+        <div class="row bg-success-2 mt-2">
+            <div class="container pt-4 pb-4">
+                <div class="row">
+                    <div class="col-md-3 col-sm-12 mb-1 ml-3"><i class="fa fa-cogs text-white big"></i><span class=" ml-3 text-white font-weight-bold size24">{{ user.profile.module_name }}</span></div>
+                    <div class="col-md-4 col-sm-12 mb-1 push-left offset-md-1"><i class="fa fa-user text-white big"></i><span class=" ml-3 text-white font-weight-bold size24">{{ user.first_name }} {{ user.last_name }}</span></div>
+                    <div class="col-md-3 col-sm-12 cml">
+                        <div class="row">
+                            <div class="dropdown">
+                                <a class="text-white mr-1 btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Go to </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <a class="dropdown-item" href="{% url 'monitoring_dashboard' %}">Dashboard</a>
+                                    <a class="dropdown-item" href="{% url 'list' %}">Vet Registration Applications</a>
+                                    <a class="dropdown-item" href="#">Schedule Inspections</a>
+                                    <a class="dropdown-item" href="#">Inspection Schedules list</a>
+                                    <a class="dropdown-item" href="#">Inspection Reports</a>
+                                    <a class="dropdown-item" href="{% url 'hospitals_lookup' %}">Hospitals/Centers Lookup</a>
+                                    <a class="dropdown-item" href="{% url 'licenses_lookup' %}">Radiography License Lookup</a>
+                                    <a class="dropdown-item" href="{% url 'rrbn_offices' %}">List of RRBN Zonal Offices</a>
+                                    <a class="dropdown-item" href="#">License Fees</a>
+                                    <a class="dropdown-item" href="#">BI Reports</a>
+                                    <a class="dropdown-item" href="#">My User Account</a>
+                              </div>
+                            </div>
+                            <button type="button" class="btn btn-danger"><a href="javascript:{document.getElementById('logout').submit()}" onclick="">
+                              <form id="logout" method="POST" action="{% url 'logout' %}">
+                                {% csrf_token %}
+                                <input type="hidden" />
+                              </form><i class="fa fa-power-off"> </i> Logout</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="section-1">
-          <div class="dropdown">
-            <select name="dropdown" id="dropdown">
-              <option value="nothing" selected="selected">Go To</option>
-              <option value="">Dashboard</option>
-              <option value="">List Application</option>
-              <option value="">Verify Application Documents</option>
-              <option value="#">Schedule Inspections</option>
-              <option value="#">Inspection Schedules list</option>
-              <option value="">Inspection Reports</option>
-              <option value="{% url 'hospitals_lookup' %}">Hospitals/Centers Lookup</option>
-              <option value="{% url 'licenses_lookup' %}">Radiography License Lookup</option>
-              <option value="{% url 'rrbn_offices' %}">List of RRBN Zonal Offices</option>
-              <option value="">License Fees</option>
-              <option value="">BI Reports</option>
-              <option value="">My User Account</option>
-            </select>
-          </div>
-          <button class="btn-orage"><a href="{% url 'logout' %}">Log Out </a>
-            <i class="fa fa-power-off"></i>
-          </button>
-        </div>
-      </div>
-    </nav>
+    </header>
 
 
   {% block content%} {%endblock%}
 
-  <div class="footer">
-      <div class="footer-container">
-        <div class="footer-box">
-            <p class="fp">RRBN</p>
-            <p class="fp2">
-              RRBN's key mandate is to regulate the practice of radiography in Nigeria.
-            </p><br>
-            <p class="fp2">
-              RRBN Monitoring and Emforcement portal Automates all processes in RRBN M&E processes.
-            </p>
-        </div>
-
-        <div class="footer-box">
-            <p class="fp">Home Links</p>
-            <a href="index.html">Home</a><br />
-            <a href="about-us.html">About</a><br />
-            <a href="services.html">Services</a><br />
-            <a href="help.html">Help</a><br />
-        </div>
-        <div class="footer-box">
-          <p class="fp">External Links</p>
-          <a href="#">RRBN</a><br />
-          <a href="#">ARN</a><br />
-          <a href="#">NJIRT</a><br />
-          <a href="#">MINISTRY OF HEALTH</a>
-        </div>
-        <div class="footer-box">
-          <p class="fp">Contact Us</p>
-          <p class="fp2">
-            Federal Secretariat Complex, Phase 1 Annex III, 4th Floor,
-            <br>Central Area - Abuja, Nigeria.
-          </p>
-          <p class="fp2">+234 092914928, 08039472126, 08097995066</p>
-          <p class="fp2">info@rrbn.gov.ng, monitoring@rrbn.gov.ng</p>
-          <p class="fp2">www.rrbn.gov.ng</p>
-        </div>
-      </div>
-    </div>
-
-<!--
-  {% block script %}
-  {% endblock %}
-  <script src="{% static 'js/jquery-3.3.1.js' %}"></script>
-  <script>
-    var menu = false;
-    $(".menu").click(function(){
-      if(menu == false){
-        $("nav").fadeIn();
-          menu = true;
-      }else{
-        $("nav").fadeOut();
-          menu = false;
-      }
-    })
-  </script>
-  <script src="{% static 'js/jquery-3.3.1.min.js' %} "></script>
-  <script src="{% static 'js/bootstrap.bundle.min.js' %} "></script>
-<script src="{% static 'js/main.js' %} "></script>
-
--->
 
 
 
+  <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+     <script src="{% static 'js/popper.min.js' %}"></script>
+     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+   </script>
+       <footer class="tcolor">
+           <div class="container">
+               <div class="row">
+                   <div class="col-md-3 col-sm-12">
+                       <p class="text-white ft">RRBN</p>
+                       <p class="text-white">
+                           RRBN's key mandate is to regulate the practice of radiography in Nigeria.
+                       </p>
+                       <p class="text-white ft">
+                           RRBN Monitoring and Emforcement portal Automates all processes in RRBN M&E processes.
+                       </p>
+                   </div>
+                   <div class="col-md-3 col-sm-12">
+                       <p class="text-white ft">Home Links</p>
+                       <a class="text-white flink ft" href="index.html">Home</a><br />
+                       <a class="text-white flink ft" href="about-us.html">About</a><br />
+                       <a class="text-white flink ft" href="services.html">Services</a><br />
+                       <a class="text-white flink ft" href="help.html">Help</a><br />
+                   </div>
+                   <div class="col-md-3 col-sm-12">
+                       <p class="text-white ft">External Links</p>
+                       <a class="text-white flink ft" href="#">RRBN</a><br />
+                       <a class="text-white flink ft" href="#">ARN</a><br />
+                       <a class="text-white flink ft" href="#">NJIRT</a><br />
+                       <a class="text-white flink ft" href="#">MINISTRY OF HEALTH</a>
+                   </div>
+                   <div class="col-md-3 col-sm-12">
+                       <p class="text-white ft">Contact Us</p>
+                       <p class="text-white flink ft">
+                           Federal Secretariat Complex, Phase I, Annex III, 4th Floor, <br>Central Area - Abuja, Nigeria.
+                       </p>
+                       <p class="text-white ft">+234 092914928</p>
+                       <p class="text-white ft">info@rrbn.gov.ng</p>
+                       <p class="text-white ft">www.rrbn.gov.ng</p>
+                   </div>
+               </div>
+           </div>
+       </footer>
+       <div class="copyright">
+           <div class="copyright-container">
+               <center>
+                   <p>
+                       &copy All Rights Reserved RRBN 2019</p>
+               </center>
+           </div>
+       </div>
+   </body>
 
-</body>
-</html>
+   </html>

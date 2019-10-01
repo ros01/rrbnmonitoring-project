@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title%}| New Hospital Registration {% endblock %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/registration.css' %}" />
+{% endblock %}
+
+
+{% block content %}
+<!--body-->
+<div class="reg-container">
+<div class="progress">
+  <p><strong>New Hospital Registration - Profile Creation</strong></p>
+  <hr/>
+  <img src="{% static 'img/progress_bar.jpg' %}"  alt="progress bar">
+
+</div>
+<div class="notice">
+  <div class="img">
+    <img src="{% static 'img/info.png' %}" alt="info icon">
+  </div>
+  <div class="text">
+    <p><strong>Notice:</strong> This is the first step for New Hospitals/Centres Registration with the Radiographers Registration Board of Nigeria. Kindly go through the guildlines and conditions. Please note that all entry document uploaded at this stage will be vetted before a user account is created for you on the portal in order for you to complete the registration process.</p>
+  </div>
+</div>
+<div class="text2">
+  <p class="info"><strong>Requirements for Hospitals Registration</strong></p>
+
+  <p><span class="span1">1</span> Valid certificate of incorporation.</p>
+  <p><span class="span1">2</span>Form C02 showing names and particulars of director(s) and radiographer(s).</p>
+  <p><span class="span1">3</span>Current Radiographer practicing Licence</p>
+  <p><span class="span1">4</span>Payment of fifty thousand naira (N50,000.00) Registration fee.</p>
+  <p class="info"><strong>Note:</strong> Provisional Registration is valid for 2 years.</p>
+
+  <p class="info"><strong>Registration Process Flow</strong></p>
+  <p><span class="span1">1</span>STEP 1: Submission of basic hospital/centre details, certificate of incorporation, form C02 and <span class="span2">radiographer practicing Licence.</span></p>
+  <p><span class="span1">2</span>STEP 2: Verification of submitted documents, upon successful verification hspital/centre is expected <span class="span2">to make payment of registration free of N50,000.00 via Remita.</span></p>
+  <p><span class="span1">3</span>STEP 3: Upon succesful payment, hospital is scheduled for inspection </p>
+  <p><span class="span1">4</span>STEP 4: Facility inspection is carried out by RRBN Inspection and monitoring team from the Head <span class="span2">Quarters or Zonal offices.</span></p>
+  <p><span class="span1">5</span>STEP 5: Report of facility inspection communicated to hospital with summary of areas of <span class="span2">improvement.</span></p>
+  <p><span class="span1">6</span>STEP 6: Hospital issued Provisional Practice permit valid for 2 years.</p>
+  <p class="info"><strong>Note:</strong> Upon issue of provisional permit, Hospital/centre is informed of next date of inspection, monioring. This is required of issue of full registration  certificate/accreditation for internship.</p>
+</div>
+<div class="button-group">
+  <a href="#" class="btn-1">X Cancel</a>
+ <a href="{% url 'register' %}" class="btn-2"><i class="fa fa-caret-right"></i> I Agree (proceed)</a>
+</div>
+</div>
+      <!--body ends-->
+
+
+
+
+{% endblock %}

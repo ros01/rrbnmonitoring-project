@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 
 
 #from contacts.models import Contact
-
+"""
 def register(request):
   if request.method == 'POST':
     # Get form values
@@ -44,7 +44,7 @@ def register(request):
       return redirect('register')
   else:
     return render(request, 'profiles/register.html')
-
+"""
 def login(request):
   if request.method == 'POST':
     username = request.POST['username']
@@ -67,9 +67,9 @@ def login(request):
 
 
 def logout(request):
-  if request.method == 'GET':
+  if request.method == 'POST':
     auth.logout(request)
-    #messages.success(request, 'You are now logged out')
+    messages.success(request, 'You are now logged out')
     return redirect('index')
 
 #def dashboard(request):
