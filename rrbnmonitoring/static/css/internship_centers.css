@@ -29,27 +29,35 @@ main{
     font-weight: bold;
 }
 
+.unstyled{
+    text-decoration: none;
+    color: #000;
+}
+
+.unstyled:hover{
+    text-decoration: none;
+    color:#817e7e;
+}
 
 .nav-link:hover {
     color: rgb(141, 245, 131) !important;
   }
 
  body{
-     overflow-x: hidden;
+     overflow-x: hidden; 
  }
 
  .tcolor{
      background: #32776B;
  }
 
- .frame{
-    width:520px;
-    height:450px;
- }
+.resize{
+    width: 22rem;
+}
 
- .phone-email{
-     color: red;
- }
+.card-subtitle{
+    font-size: 15px;
+}
 
  .ft{
      font-size: 16px;
@@ -77,15 +85,15 @@ main{
     overflow: hidden;
   }
   .copyright .copyright-container{
-    width: 80%;
-    margin: 0 auto;
+    width: 80%; 
+    margin: 0 auto; 
   }
-
+  
   .copyright .copyright-container p{
-    color: #fff;
+    color: #fff; 
     padding-top: 10px;
   }
-
+  
 
 footer{
     border-top: 2px solid rgb(75, 201, 75);
@@ -100,15 +108,9 @@ footer{
         margin-bottom: 10px;
     }
 
-    .frame{
-        width:320px !important;
-        height:350px;
-     }
-
-     main{
-        margin: 0;
+    .resize{
+        width: 14rem;
     }
-
 }
 
 @media screen and (max-width: 640px) {
@@ -118,10 +120,6 @@ footer{
         margin-left: 0;
         margin-bottom: 10px;
     }
-    main{
-        margin: 0;
-    }
-
 }
 
  @media screen and (max-width: 414px) {
@@ -136,13 +134,16 @@ footer{
         margin-top: 20px;
     }
 
-    .frame{
-        width:350px !important;
-        height:350px;
-     }
+    .pull-up{
+        margin-bottom: -15px;
+    }
 
-     main{
-        margin: 0;
+    .down{
+        margin-bottom: 20px;
+    }
+
+    .resize{
+        width: 23.5rem;
     }
 
 }
@@ -155,15 +156,10 @@ footer{
         margin-bottom: 10px;
     }
 
-    .frame{
-        width:310px !important;
-        height:350px;
-     }
-
-     main{
-        margin: 0;
+    .resize{
+        width: 21.5rem;
     }
-
+ 
 }
 
 @media screen and (max-width: 360px) {
@@ -173,14 +169,9 @@ footer{
         margin-left: 0;
         margin-bottom: 10px;
     }
-
-    .frame{
-        width:295px !important;
-        height:350px;
-     }
-
-     main{
-        margin: 0;
+    
+    .resize{
+        width: 20.5rem;
     }
 
 }
@@ -193,13 +184,12 @@ footer{
         margin-bottom: 10px;
     }
 
-    .frame{
-        width:260px !important;
-        height:350px;
-     }
+    .resize{
+        width: 18rem;
+    }
 
-     main{
-        margin: 0;
+    .shrink{
+        font-size: 14px;
     }
 
 }

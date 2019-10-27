@@ -50,18 +50,18 @@
                   </tr>
               </tfoot>
                 <tbody>
-                  {% if centre %}
-                    {% for centre in centre %}
+                  {% if hospital %}
+                    {% for hospital in hospital %}
                     <tr>
-                      <td>{{centre.id}} </td>
+                      <td>{{hospital.id}} </td>
                       <td>00345</td>
-                      <td>{{centre.centre_name}}</td>
-                      <td>{{centre.rc_number}}</td>
+                      <td>{{hospital.hospital_name}}</td>
+                      <td>{{hospital.rc_number}}</td>
                       <td>Hospital</td>
                       <td>New</td>
-                      <td>{{centre.reg_date_pretty}}</td>
+                      <td>{{hospital.reg_date_pretty}}</td>
                       <td>Pending</td>
-                      <td><a href="{% url 'vet_application' centre.id %}" class="btn btn-outline-warning btn-sm"><i class="fa fa-eye text-danger"></i> view</a></td>
+                      <td><a href="{% url 'vet_application' hospital.id %}" class="btn btn-outline-warning btn-sm"><i class="fa fa-eye text-danger"></i> view</a></td>
                     </tr>
                    {% endfor %}
                   {% else %}

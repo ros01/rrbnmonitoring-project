@@ -1,122 +1,203 @@
+main{
+    margin: 3rem 0;
+}
+.footer_nav{
+    margin: 3rem 0;
+}
+.footer_nav button{
+    margin-right: .5rem;
 
-/*body styles*/
-
-.a-container {
-  width: 80%;
-  margin: 20px auto 10px auto;
-  height: 650px;
+}
+.dropdown-item{
+    color: #000;
 }
 
-.btn-2 {
-  background: rgb(10, 16, 31);
-  text-align: center;
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-  padding: 5px 10px;
-  cursor: pointer;
+.dropdown-item:hover{
+    background: #fff;
+    color: green;
 }
 
-a.btn-2:hover {
-  color: rgb(255, 115, 0);
+.dropdown-menu{
+    margin-top: 8px;
+    border-top: none;
+    border-radius: 1px;
 }
 
-.one {
-  width: 100%;
+.nav-link{
+    padding-right: 8rem!important;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.one p {
-  font-size: 24px;
-  padding: 10px 0px;
-}
-
-a.faq:hover {
-  color: orangered;
-}
-
-.two {
-  width: 100%;
-}
-.two .two-a {
-  width: 35%;
-  height: 450px;
-  float: left;
-  background: #ebf0f8;
-}
-
-.two .two-a .box {
-  width: 45%;
-  height: 150px;
-  background: #fff;
-  float: left;
-  margin: 2.5%;
-}
-
-.two .two-a .box img {
-  width: 45px;
-  height: 45px;
-  margin: 20% 35% 0% 35%;
-  border-radius: 25px;
-  background: black;
-  padding: 7px;
-}
-.two .two-a .box p {
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.two .two-b {
-  width: 62%;
-  height: 450px;
-  float: right;
-  margin-left: 10px;
-}
-
-.push {
-  padding-bottom: 15px;
-}
-.two .two-b h3 {
-  margin-bottom: -25px;
-  color: rgb(231, 108, 26);
-}
-
-.two .two-b p {
-  font-size: 14px;
-}
-
-/*footer styles*/
-
-
-/* Media Queries*/
-
-@media screen and (max-width: 768px) {
-  .one p {
-    text-align: center;
+.nav-link:hover {
+    color: rgb(141, 245, 131) !important;
   }
 
-  .two .two-a {
+body{
+     overflow-x: hidden;
+ }
+
+ .logo{
+     width: 40% !important;
+ }
+
+ .icon{
+     background: rgb(0, 0, 0);
+     padding: 10px;
+     font-size: 30px;
+     color: rgb(204, 191, 13);
+     border-radius: 50%;
+ }
+
+.orangeish{
+    color: #F1901A;
+}
+
+ .curved{
+     border-radius: 10px;
+ }
+ .link-warning{
+     color: #000;
+     font-size: 14px;
+     font-weight: 600;
+ }
+ .link-warning:hover{
+    color:orangered !important;
+    text-decoration: none !important;
+ }
+
+ .tcolor{
+     background: #01A372;
+ }
+
+ .ft{
+     font-size: 16px;
+     line-height: 1;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .frbg{
+     background: #28A745;
+ }
+
+ .ml{
+     margin-left: 120px;
+ }
+
+ .flink:hover{
+    color: rgb(32, 189, 45) !important;
+ }
+
+ .copyright{
     width: 100%;
+    background-color: #000;
+    height: 50px;
+    clear: both;
+    overflow: hidden;
+  }
+  .copyright .copyright-container{
+    width: 80%;
+    margin: 0 auto;
   }
 
-  .two .two-b {
-    width: 100%;
-    height: auto;
+  .copyright .copyright-container p{
+    color: #fff;
     padding-top: 10px;
   }
 
-  .two .two-b img {
-    margin-left: 130px;
-  }
 
-  .two .two-b h3 {
-    text-align: center;
-  }
+footer{
+    border-top: 2px solid rgb(75, 201, 75);
+    padding-top: 5px;
+}
 
-  .two .two-b p {
-    text-align: justify;
-  }
+@media screen and (min-width: 768px) {
+    .logo{
+        width: 80%;
+        margin-left: 0px;
+        margin-bottom: 10px;
+    }
 
-  .btn-2 {
-    margin-left: 100px;
-  }
+    .down{
+        margin-bottom: 20px;
+    }
+
+    .full{
+        width: 100% !;
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+
+    .logo{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .down{
+        margin-bottom: 40px;
+    }
+
+}
+
+ @media screen and (max-width: 414px) {
+
+    .logo{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .push{
+        margin-top: 20px;
+    }
+
+    .down{
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .logo{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .down{
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    .logo{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .down{
+        margin-bottom: 40px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .logo{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .down{
+        margin-bottom: 40px;
+    }
 }

@@ -1,16 +1,30 @@
+from django.http import Http404
 from django.shortcuts import get_object_or_404, render, redirect
 from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.core.mail import send_mail
-#from .choices import price_choices, bedroom_choices, state_choices
-
 from .models import Hospital, License, Centre
 from django.http import HttpResponse
 from .choices import state_choices
+from .forms import CentreForm
+from django.views import View
+from .forms import BasicDetailModelForm, CertUploadModelForm
+from django.urls import reverse, reverse_lazy
+from formtools.wizard.views import SessionWizardView
+from django.core.mail import send_mail
+from django.views.generic import (
+     CreateView,
+     DetailView,
+     ListView,
+     UpdateView,
+     DeleteView
+)
+
+
 
 @login_required
-def index(request):
+def index(request, *args, **kwargs):
   hospital = Hospital.objects.all()
 
   context = {
@@ -27,57 +41,83 @@ def licenses(request):
   }
   return render(request, 'hospitals/licenses_lookup.html', context)
 
-def register(request):
+@login_required
+def index(request):
+   hospital = Hospital.objects.all()
 
-  context = {
-            'state_choices': state_choices,
-            }
+   context = {
+     'hospital': hospital
+   }
+   return render(request, 'hospitals/hospitals_lookup.html', context)
 
-  if request.method == 'POST' :
-      if request.POST['centre_name'] and request.POST['rc_number'] and request.POST['phone'] and request.POST['email'] and request.POST['state'] and request.POST['city'] and request.POST['address'] and request.FILES['cac_certificate'] and request.FILES['practice_license']:
-          centre = Centre()
-          centre.centre_name = request.POST['centre_name']
-          centre.rc_number = request.POST['rc_number']
-          centre.phone = request.POST['phone']
-          centre.email = request.POST['email']
-          centre.state = request.POST['state']
-          centre.city = request.POST['city']
-          centre.address = request.POST['address']
-          centre.cac_certificate = request.FILES['cac_certificate']
-          centre.practice_license = request.FILES['practice_license']
-          centre.save()
+@login_required
+def licenses(request):
+   license = License.objects.all()
 
-          return redirect('/hospitals/' + str(centre.id))
-      else:
-          return render(request, 'hospitals/register-hospital-info.html',{'error':'All fields are required.'})
-  else:
-      return render(request, 'hospitals/register-hospital-info.html', context)
+   context = {
+     'license': license
+   }
+   return render(request, 'hospitals/licenses_lookup.html', context)
 
-
-def accept(request):
-    return render(request, 'hospitals/start-hospital-reg.html')
-
-def verify(request, id):
-  centre = get_object_or_404(Centre, pk=id)
-  return render(request, 'hospitals/validate-hospital-info.html', {'centre': centre})
-  if request.method == 'POST':
-      if request.FILES['cac_certificate'] and request.FILES['practice_license']:
-          centre = Centre()
-          centre.cac_certificate = request.FILES['cac_certificate']
-          centre.practice_license = request.FILES['practice_license']
-          centre.instance.save()
-
-      return render(request, 'hospitals/validate-hospital-info.html')
-
-  else:
-      return render(request, 'hospitals/validate-hospital-info.html',{'error':'All fields are required.'})
+class StartView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'hospitals/start-hospital-reg.html')
 
 
 
-def consent(request, id):
+class HospitalCreateView(CreateView):
+    template_name = 'hospitals/hospitals_register.html'
+    form_class = BasicDetailModelForm
+    queryset = Hospital.objects.all() #blog/modelname_list.html
+    #success_url = '/'
 
-    centre = get_object_or_404(Centre, pk=id)
-    return render(request, 'hospitals/hospital-info-submission-confirmation.html', {'centre': centre})
+class HospitalUpdateView(View):
+
+    template_name = 'hospitals/hospital_validate.html'
+    template_name1 = 'hospitals/hospital-info-submission-confirmation.html'
+    queryset = Hospital.objects.all()
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None:
+            obj = get_object_or_404(Hospital, id=id)
+
+        return obj
+
+    def get(self, request, id=None, *args, **kwargs):
+        context = {}
+        obj = self.get_object()
+        if obj is not None:
+            form = CertUploadModelForm(instance=obj)
+            context['object'] = obj
+            context['form'] = form
+
+        return render(request, self.template_name, context)
+
+    def post(self, request, id=None, *args, **kwargs):
+        context = {}
+        obj = self.get_object()
+        if obj is not None:
+           form = CertUploadModelForm(request.POST, request.FILES, instance=obj)
+           if form.is_valid():
+              form.save()
+           context['object'] = obj
+           context['form'] = form
+        return render(request, self.template_name1, context)
+
+
+class HospitalDetailView(View):
+    template_name = 'hospitals/hospital-info-submission-confirmation.html'
+    queryset = Hospital.objects.all()
+    def get_object(self):
+        id = self.kwargs.get('id')
+        obj = None
+        if id is not None:
+            obj = get_object_or_404(Hospital, id=id)
+        return obj
+
+
+
 
 
 # Send email
@@ -88,9 +128,3 @@ def consent(request, id):
  # ['chigozie_okaro@yahoo.com']
   #fail_silently=False
 #)
-def search(request):
-
-    context = {
-            'state_choices': state_choices,
-            }
-    return render(request, 'hospitals/search.html', context)

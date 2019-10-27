@@ -35,21 +35,30 @@ main{
   }
 
  body{
-     overflow-x: hidden;
+     overflow-x: hidden; 
  }
 
  .tcolor{
      background: #32776B;
  }
 
- .frame{
-    width:520px;
-    height:450px;
- }
+.card-title{
+    font-size: 14px;
+}
 
- .phone-email{
-     color: red;
- }
+.card-subtitle{
+    font-size: 15px;
+}
+
+.fa-building{
+    font-size: 40px;
+    color: #F69953;
+    margin-left: 70px;
+}
+
+.font-small{
+    font-size: 12px;
+}
 
  .ft{
      font-size: 16px;
@@ -77,15 +86,15 @@ main{
     overflow: hidden;
   }
   .copyright .copyright-container{
-    width: 80%;
-    margin: 0 auto;
+    width: 80%; 
+    margin: 0 auto; 
   }
-
+  
   .copyright .copyright-container p{
-    color: #fff;
+    color: #fff; 
     padding-top: 10px;
   }
-
+  
 
 footer{
     border-top: 2px solid rgb(75, 201, 75);
@@ -99,16 +108,6 @@ footer{
         margin-left: 0;
         margin-bottom: 10px;
     }
-
-    .frame{
-        width:320px !important;
-        height:350px;
-     }
-
-     main{
-        margin: 0;
-    }
-
 }
 
 @media screen and (max-width: 640px) {
@@ -117,9 +116,6 @@ footer{
         width: 100%;
         margin-left: 0;
         margin-bottom: 10px;
-    }
-    main{
-        margin: 0;
     }
 
 }
@@ -136,14 +132,6 @@ footer{
         margin-top: 20px;
     }
 
-    .frame{
-        width:350px !important;
-        height:350px;
-     }
-
-     main{
-        margin: 0;
-    }
 
 }
 
@@ -155,15 +143,7 @@ footer{
         margin-bottom: 10px;
     }
 
-    .frame{
-        width:310px !important;
-        height:350px;
-     }
-
-     main{
-        margin: 0;
-    }
-
+ 
 }
 
 @media screen and (max-width: 360px) {
@@ -174,15 +154,6 @@ footer{
         margin-bottom: 10px;
     }
 
-    .frame{
-        width:295px !important;
-        height:350px;
-     }
-
-     main{
-        margin: 0;
-    }
-
 }
 
 @media screen and (max-width: 320px) {
@@ -191,15 +162,6 @@ footer{
         width: 100%;
         margin-left: 0;
         margin-bottom: 10px;
-    }
-
-    .frame{
-        width:260px !important;
-        height:350px;
-     }
-
-     main{
-        margin: 0;
     }
 
 }

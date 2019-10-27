@@ -1,168 +1,189 @@
+main{
+    margin: 1rem 0;
+}
+.footer_nav{
+    margin: 3rem 0;
+}
+.footer_nav button{
+    margin-right: .5rem;
 
-/*BODY STARTS*/
-
-.f-container{
-  width: 73%;
-  height: auto;
-  margin: 20px auto;
-  border: 1px solid #2DC565;
+}
+.dropdown-item{
+    color: #000;
 }
 
-.f-container .faq{
-  width: 250px;
-  height: auto;
-  background: #2DC565;
+.dropdown-item:hover{
+    background: #fff;
+    color: green;
 }
 
-.f-container .faq p{
-  color: #fff;
-  padding: 5px;
-  text-align: center;
-  margin-top: 0;
+.dropdown-menu{
+    margin-top: 8px;
+    border-top: none;
+    border-radius: 1px;
 }
 
-.f-container .tab-section {
-  width: 90%;
-  margin: 40px auto;
-  padding: 0 10px;
+.nav-link{
+    padding-right: 8rem!important;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.f-container .tab-section .tab-area {
-  width: 100%;
-  position: relative;
-  color: #000;
+
+.nav-link:hover {
+    color: rgb(141, 245, 131) !important;
+  }
+
+ body{
+     overflow-x: hidden;
+ }
+
+ .tcolor{
+     background: #32776B;
+ }
+
+ /*faq only css*/
+
+ .buttom-border{
+    border-bottom: 1px solid #d3cfcf;
 }
 
-.f-container .tab-section .tab-area input {
-  position: absolute;
-  opacity: 0;
-  z-index: -1;
+ .push-2{
+    padding-top: 10px;
+ }
+
+ .card-title{
+     font-size: 1rem;
+     font-weight: 500;
+ }
+
+.card-subtitle{
+    font-size: 15px;
+}
+/*faq only css ends*/
+
+/*Accordion css starts*/
+
+.accordion .card-header:after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f068";
+    float: right;
+    color: #DB2A25;
 }
 
-.f-container .tab-section .tab-area label {
-  background:#f2f5f7;
-  cursor: pointer;
-  display: block;
-  font-size: 14.5px;
-  line-height: 2.5;
-  padding: 3px 0 5px 2em;
-  position: relative;
-  margin-bottom: 10px;
-  transition: all 0.3s ease 0s;
-  color: #000;
+.accordion .card-header.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\f067";
 }
 
-.f-container .tab-section .tab-area label:hover {
-  background: rgb(28, 163, 78);
-  color: #fff;
+.card-header:hover{
+    background: #28A745;
+    color: #fff;
 }
 
-.f-container .tab-section .tab-content {
-  background: #fff;
-  max-height: 0;
-  overflow: hidden;
-  padding: -3px 15px;
-  -webkit-transition: max-height 0.3s;
-  -o-transition: max-height 0.3s;
-  transition: max-height 0.3s;
-  font-size: 15px;
-  color: #838282;
-  line-height: 30px;
+/*Accordion css ends*/
+
+ .ft{
+     font-size: 16px;
+     line-height: 1;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .frbg{
+     background: #000;
+ }
+
+ .ml{
+     margin-left: 120px;
+ }
+
+ .flink:hover{
+    color: rgb(32, 189, 45) !important;
+ }
+
+ .copyright{
+    width: 100%;
+    background-color: #000;
+    height: 50px;
+    clear: both;
+    overflow: hidden;
+  }
+  .copyright .copyright-container{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .copyright .copyright-container p{
+    color: #fff;
+    padding-top: 10px;
+  }
+
+footer{
+    border-top: 2px solid rgb(75, 201, 75);
+    padding-top: 5px;
 }
-
-.f-container .tab-section .tab-area label .l{
-float: left;
-font-size: 25px;
-font-weight: bold;
-color: #000;
-margin-top: -10px;
-padding-right: 10px;
-}
-
-.f-container .tab-section .tab-area input:checked ~ .tab-content {
-  max-height: 20em;
-}
-
-.clearfix{
-  clear: both;
-}
-/*
-label:before,
-label:after
-{
-  content:'';
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 30px;
-  height: 30px;
-  background-color: #fff;
-  transition: transform 0.25s ease-out;
-}
-
-label:before{
-  top: 5px;
-  right: 20px;
-  width: 2px;
-  height: 22px;
-  background: #fff;
-  margin-top: -2px;
-}
-
-label:after{
-  top: 50%;
-  right: 10px;
-  width: 22px;
-  height: 1px;
-  background: #fff;
-  margin-top: -2px;
-}
-
-*/
-
-/*BODY ENDS*/
-
-
-/*MEDIA QUERIES*/
 
 @media screen and (max-width: 768px) {
-.logo-box {
-  float: none;
-  text-align: center;
-}
 
-.header-links {
-  text-align: center;
-  margin-top: -40px;
-  float: none;
-  display: none;
-}
-
-
-/*BODY MOBILE STARTS*/
-
-.f-container{
-  width: 100%;
-  padding: 0;
-}
-
-.tab-section{
-  margin:0;
-  padding: 0;
-  width: 100%;
-}
-
-.f-container .tab-section .tab-content {
-  line-height: 17px;
-}
-
-/*BODY MOBILE ENDS*/
-
-
-}
-
-@media screen and (max-width: 400px) {
-  .f-container .tab-section .tab-area label{
-    font-size: 30px;
+    .logo{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
     }
+}
+
+@media screen and (max-width: 640px) {
+
+    .logo{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+}
+
+ @media screen and (max-width: 414px) {
+
+    .logo{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .push{
+        margin-top: 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 375px) {
+
+    .logo{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 360px) {
+
+    .logo{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+    .logo{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
 }

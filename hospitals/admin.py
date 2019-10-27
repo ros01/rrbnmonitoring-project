@@ -3,10 +3,10 @@ from django.contrib import admin
 from .models import Hospital, License, Centre
 
 class HospitalAdmin(admin.ModelAdmin):
-  list_display = ('id', 'name', 'address', 'state', 'services', 'equipment', 'radiographers')
-  list_display_links = ('id', 'name')
-  list_filter = ('name',)
-  search_fields = ('name', 'address', 'state', 'services', 'equipment', 'radiographers')
+  list_display = ('id', 'hospital_name', 'address', 'state', 'services', 'equipment', 'radiographers')
+  list_display_links = ('id', 'hospital_name')
+  list_filter = ('hospital_name',)
+  search_fields = ('hospital_name', 'address', 'state', 'services', 'equipment', 'radiographers')
   list_per_page = 25
 
 

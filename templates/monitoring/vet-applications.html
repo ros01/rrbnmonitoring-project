@@ -21,35 +21,35 @@
             <div class="col-md-12">
                 <div class="row">
                     <span class="col-5">Hospital Name:</span>
-                    <span class="col-6">{{centre.centre_name}}</span>
+                    <span class="col-6"><strong>{{hospital.hospital_name}}</strong></span>
                 </div>
                 <div class="row">
                     <span class="col-5">RC Number:</span>
-                    <span class="col-6 ">{{centre.rc_number}}</span>
+                    <span class="col-6 "><strong>{{hospital.rc_number}}</strong></span>
                 </div>
                 <div class="row">
                     <span class="col-5">Category:</span>
-                    <span class="col-6">Cliff Gadf</span>
+                    <span class="col-6"><strong>Cliff Gadf</strong></span>
                 </div>
                 <div class="row">
                     <span class="col-5">Telephone:</span>
-                    <span class="col-6">{{centre.phone}}</span>
+                    <span class="col-6"><strong>{{hospital.phone}}</strong></span>
                 </div>
                 <div class="row">
                     <span class="col-5">Email:</span>
-                    <span class="col-6">{{centre.email}}</span>
+                    <span class="col-6"><strong>{{hospital.email}}</strong></span>
                 </div>
                 <div class="row">
                     <span class="col-5">Contact Address:</span>
-                    <span class="col-6">{{centre.address}}</span>
+                    <span class="col-6"><strong>{{hospital.address}}</strong></span>
                 </div>
                 <div class="row">
                     <span class="col-5">City:</span>
-                    <span class="col-6">{{centre.city}}</span>
+                    <span class="col-6"><strong>{{hospital.city}}</strong></span>
                 </div>
                 <div class="row">
                     <span class="col-5">State of Location:</span>
-                    <span class="col-6">{{centre.state}}</span>
+                    <span class="col-6"><strong>{{hospital.state}}</strong></span>
                 </div>
             </div>
         </div>
@@ -59,26 +59,26 @@
                 <p class="text-success">Uploaded Documents</p>
                 <div class="row">
                     <span class="col-5">CAC Document:</span>
-                    <span class="col-6"><i class="fa fa-eye text-dark"></i><a class="text-danger" href="{{centre.cac_certificate.url}}"> View CAC Documents</a></span>
+                    <span class="col-6"><i class="fa fa-eye text-dark"></i><a class="text-danger" href="{{hospital.cac_certificate.url}}"> View CAC Documents</a></span>
                 </div>
                 <div class="row">
                     <span class="col-5">Practicing Licence:</span>
-                    <span class="col-6"><i class="fa fa-eye text-dark"></i><a class="text-danger" href="{{centre.practice_license.url}}"> View Practicing Licence</a></span>
+                    <span class="col-6"><i class="fa fa-eye text-dark"></i><a class="text-danger" href="{{hospital.practice_license.url}}"> View Practicing Licence</a></span>
                 </div>
             </div>
             <div class="col-md-12 mt-3">
                 <p class="text-success">Control Details</p>
                 <div class="row">
                     <span class="col-5">Submitted on: </span>
-                    <span class="col-6">{{centre.reg_date}}</span>
+                    <span class="col-6"><strong>{{hospital.reg_date}}</strong></span>
                 </div>
                 <div class="row">
                     <span class="col-5">Vetted on: </span>
-                    <span class="col-6 ">27-3-1019</span>
+                    <span class="col-6 "><strong>{{hospital.reg_date}}</strong></span>
                 </div>
                 <div class="row">
                     <span class="col-5">Vetted by: </span>
-                    <span class="col-6 ">{{ user.first_name }} {{ user.last_name }}</span>
+                    <span class="col-6 "><strong>{{ user.first_name }} {{ user.last_name }}</strong></span>
                 </div>
             </div>
         </div>
