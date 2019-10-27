@@ -11,7 +11,6 @@ from .forms import CentreForm
 from django.views import View
 from .forms import BasicDetailModelForm, CertUploadModelForm
 from django.urls import reverse, reverse_lazy
-from formtools.wizard.views import SessionWizardView
 from django.core.mail import send_mail
 from django.views.generic import (
      CreateView,
