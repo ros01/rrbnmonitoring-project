@@ -21,16 +21,6 @@ from django.views.generic import (
 )
 
 
-
-@login_required
-def index(request, *args, **kwargs):
-  hospital = Hospital.objects.all()
-
-  context = {
-    'hospital': hospital
-  }
-  return render(request, 'hospitals/hospitals_lookup.html', context)
-
 @login_required
 def licenses(request):
   license = License.objects.all()
@@ -49,14 +39,7 @@ def index(request):
    }
    return render(request, 'hospitals/hospitals_lookup.html', context)
 
-@login_required
-def licenses(request):
-   license = License.objects.all()
 
-   context = {
-     'license': license
-   }
-   return render(request, 'hospitals/licenses_lookup.html', context)
 
 class StartView(View):
     def get(self, request, *args, **kwargs):
