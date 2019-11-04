@@ -29,6 +29,7 @@ urlpatterns = [
     #path('register/', views.HospitalRegisterView.as_view(), name='hospitals-register'),
     #path('<int:id>/', views.HospitalDetailView.as_view(), name='reg-detail'),
     path('<int:id>/update/', HospitalUpdateView.as_view(), name='update'),
+    
     #path('<int:id>/delete/', HospitalDeleteView.as_view(), name='hospitals-delete'),
     #path('<int:id>/consent', views.consent, name='consent'),
 

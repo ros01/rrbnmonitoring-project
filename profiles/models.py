@@ -13,9 +13,9 @@ class Profile(models.Model):
 
     MODULE_NAME = (
 	('Monitoring HQ', 'MonitoringHq'),
-	('Enugu Zonal Office', 'EnuguOffice'),
+	('Enugu Office', 'EnuguOffice'),
 	('Registrars Office', 'CEO'),
-	('Finance & Accounts', 'FAH'),
+	('Accounts HQ', 'FAH'),
 	)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     module_name = models.CharField (max_length=20, choices=MODULE_NAME)

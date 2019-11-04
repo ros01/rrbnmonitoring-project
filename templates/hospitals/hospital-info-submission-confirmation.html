@@ -11,15 +11,19 @@
         </div>
 
         <div class="row bg-success rounded">
-            <div class="col-md-6 m-auto">
-                <span class="fa fa-check text-white text-center pl-5 pt-2 w-75"></span>
-                <p class="text-white pt-2 tetx-center">Your interest to register your hospital / clinic has been submitted successfully to RRBN. We will verify your details and document(s), Thank you. </p>
+            <div class="col-md-11 m-auto">
+                <span class="fa fa-check text-white text-center pl-6 pt-2 w-75"></span>
+                <p class="text-white pt-2 tetx-center">Your interest to register your hospital/centre has been submitted successfully to RRBN. We will verify your details and document(s); once verified, a User Account will be created for you to continue your application.  Your Application Number is {{object.id}}.  Kindly note this number as it will be needed to continue you application, thank you. </p>
             </div>
         </div>
 
         <div class="row justify-content-md-center">
             <div class="col-md-6 mt-3">
                 <div class="col-md-12">
+                  <div class="row">
+                      <span class="col-5">Application No:</span>
+                      <span class="col-6"><strong>{{object.id}}</strong></span>
+                  </div>
                     <div class="row">
                         <span class="col-5">Hospital Name:</span>
                         <span class="col-6"><strong>{{object.hospital_name}}</strong></span>
@@ -55,7 +59,8 @@
             <div class="row justify-content-md-center mt-3">
                 <div class="col-md-6">
                     <div class="col-md-9">
-                        <button type="button" name="cancel" class="btn btn-danger">&times; Cancel</button>
+                        <a href="{% url 'index' %}" <button type="button" name="cancel" class="btn btn-danger">&times; Close</button></a>
+
                     </div>
                 </div>
             </div>

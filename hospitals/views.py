@@ -12,6 +12,8 @@ from django.views import View
 from .forms import BasicDetailModelForm, CertUploadModelForm
 from django.urls import reverse, reverse_lazy
 from django.core.mail import send_mail
+from django.template.loader import get_template
+from django.conf import settings
 from django.views.generic import (
      CreateView,
      DetailView,
@@ -58,6 +60,7 @@ class HospitalUpdateView(View):
     template_name = 'hospitals/hospital_validate.html'
     template_name1 = 'hospitals/hospital-info-submission-confirmation.html'
     queryset = Hospital.objects.all()
+
     def get_object(self):
         id = self.kwargs.get('id')
         obj = None
@@ -85,7 +88,19 @@ class HospitalUpdateView(View):
               form.save()
            context['object'] = obj
            context['form'] = form
+
+
+           subject = 'Acknowledgment of Interest to Register with RRBN'
+           from_email = settings.DEFAULT_FROM_EMAIL
+           to_email = [obj.email]
+
+           context['form'] = form
+           contact_message = get_template('hospitals/contact_message.txt').render(context)
+
+           send_mail(subject, contact_message, from_email, to_email, fail_silently=False)
+
         return render(request, self.template_name1, context)
+
 
 
 class HospitalDetailView(View):

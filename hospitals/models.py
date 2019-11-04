@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 from datetime import datetime
 from django.urls import reverse
@@ -5,10 +6,11 @@ from django.urls import reverse
 #from realtors.models import Realtor
 
 class Hospital(models.Model):
+  id = models.AutoField(primary_key=True, unique=True)
   hospital_name = models.CharField(max_length=200)
   rc_number = models.CharField(max_length=100)
   phone = models.CharField(max_length=100)
-  email = models.CharField(max_length=100)
+  email = models.EmailField(max_length=100)
   state = models.CharField(max_length=100)
   city = models.CharField(max_length=100)
   address = models.CharField(max_length=200)

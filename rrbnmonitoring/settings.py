@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'hospitals.apps.HospitalsConfig',
     'monitoring.apps.MonitoringConfig',
     'crispy_forms',
-    #'utilities.apps.UtilitiesConfig',
+    'utilities.apps.UtilitiesConfig',
     'zonal_offices.apps.ZonalOfficesConfig',
     'registrars_office.apps.RegistrarsOfficeConfig',
     'django.contrib.admin',
@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'rrbnmonitoring.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'rrbnmonitoringdb',
+        'NAME': 'rrbnmonitoring2',
         'USER': 'postgres',
         'PASSWORD': 'blackstone1',
         'HOST': 'localhost',
@@ -151,14 +151,18 @@ MESSAGE_TAGS = {
     messages.ERROR: 'danger'
 }
 
-# Email config
-EMAIL_HOST = 'smtp.gmail.com'
+# Sendgrid settings
+
+
+SENDGRID_API_KEY = os.getenv('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')
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER='blueace'
+EMAIL_HOST_PASSWORD='bluerebel1x'
 EMAIL_PORT = 587
-EMAIL_HOST_USER='blueacetechng@gmail.com'
-EMAIL_HOST_PASSWORD='blackstone123'
-EMAIL_USE_TLS=True
-
-
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = '"RRBN" <noreply@monitoring.rrbn.gov.ng>'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 try:
     from .local_settings import *
